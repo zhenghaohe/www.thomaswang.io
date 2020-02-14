@@ -35,7 +35,9 @@ const BlogPostTemplate = props => {
         url={`https://www.thomaswang.io/blog${slug}`}
         imageUrl={blogMarkdown.metaImageUrl && blogMarkdown.metaImageUrl}
       />
-      <h1>{blogMarkdown.title}</h1>
+      <h1 style={{ fontFamily: `'Merriweather','Georgia',serif` }}>
+        {blogMarkdown.title}
+      </h1>
       <p
         style={{
           ...scale(-1 / 5),
@@ -57,8 +59,13 @@ const BlogPostTemplate = props => {
         }}
       />
       <div style={{ textAlign: "center", margin: "4rem 0 5rem" }}>
-        Do you like this blog?{" "}
-        <a href="https://t.wang.sh/sponsor-blog">Become a sponsor</a>.
+        To propose a change to this post,{" "}
+        <a
+          href={`https://github.com/thomaswang/www.thomaswang.io/edit/master/content/blog/${slug}index.mdx`}
+        >
+          edit on GitHub
+        </a>
+        .
       </div>
       <Subscribe />
       <Bio />

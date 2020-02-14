@@ -8,11 +8,11 @@
 
   _or_
 
-- Add new `.md` file to `/content/blog`
+- Add new directory and `index.md` file to `/content/blog`
 
 ### MDX posts
 
-- Add new `.mdx` file to `/content/blog`
+- Add new directory and `index.mdx` file to `/content/blog`
 
 If you need to add a live, user-editable React component, use [React Live Playground](https://github.com/thomaswang/react-live-playground).
 
@@ -28,3 +28,5 @@ export const code = `[CODE]`.trim()
   className="react-live-playground"
 />
 ```
+
+**To support consistency and the "Edit on GitHub" feature, all posts will be in `mdx`**
