@@ -103,3 +103,5 @@ Happy hacking and [share with me your new blog](https://twitter.com/intent/tweet
 _07/23/2019_ – This post was refined and converted to a tutorial on [gatsbyjs.org](https://www.gatsbyjs.org), called [Making a Gatsby Blog with Netlify CMS](https://www.gatsbyjs.org/tutorial/blog-netlify-cms-tutorial/).
 
 _11/21/2019_ – Gatsby Personal Starter Blog now comes pre-installed and pre-configured with [MDX](https://mdxjs.com/), which lets you add React Components with JSX to your markdown posts. You can't use Netlify CMS to add MDX posts, instead you have to add a `.mdx` file to `[your-blog]/content/blog/`. To add MDX to an existing blog, I wrote a [blog post in the Gatsby blog on how to do the conversion](https://www.gatsbyjs.org/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/).
+
+_02/13/2020_ – I open sourced my personal website/blog at [github.com/thomaswang/www.thomaswang.io](https://github.com/thomaswang/www.thomaswang.io), which is this site. It includes extra configurations and components that extend Gatsby Personal Starter Blog.
