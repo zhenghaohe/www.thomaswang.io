@@ -1,0 +1,4 @@
+# Netlify redirects
+
+# Redirect default Netlify subdomain to primary domain
+https://thomaswang.netlify.com/* https://www.thomaswang.io/:splat 301!

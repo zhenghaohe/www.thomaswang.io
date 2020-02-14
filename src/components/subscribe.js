@@ -1,0 +1,100 @@
+import React from "react"
+import SubscribeCard from "react-subscribe-card"
+import { connect } from "react-redux"
+
+const Subscribe = props => {
+  const lightTheme = !props.isDarkMode
+  const darkTheme = props.isDarkMode
+  const background = lightTheme ? "#ffffff" : "#373C3F"
+  const border = lightTheme ? "#F5F5F5" : "#32373A"
+  const inputBackground = lightTheme ? "#f5f5f5" : "#494D50"
+  const inputBackgroundFocus = lightTheme ? "#fff" : "#000"
+  const inputPlaceholder = darkTheme && "rgba(255, 255, 255, 0.6)"
+  const inputText = darkTheme && "white"
+  const button = darkTheme && "#26bcfb"
+
+  const outerCardStyle = `
+    padding: 0;
+    background-color: ${border};
+    border-radius: 4px;
+    border: 4px solid ${border};
+    border-top-width: 0;
+    border-bottom-width: 0;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 4px;
+      display: block;
+      background-image: repeating-linear-gradient(135deg, #FE5A54 0px, #FE5A54 15px, transparent 15px, transparent 25px, #3FA9F4 25px, #3FA9F4 40px, transparent 40px, transparent 50px);
+      border-radius: 4px 4px 0 0;
+    }
+    &::after {
+      content: '';
+      width: 100%;
+      height: 4px;
+      display: block;
+      background-image: repeating-linear-gradient(135deg, #FE5A54 0px, #FE5A54 15px, transparent 15px, transparent 25px, #3FA9F4 25px, #3FA9F4 40px, transparent 40px, transparent 50px);
+      border-radius: 0 0 4px 4px;
+    }
+  `
+
+  const innerCardStyle = `
+    background-color: ${background};
+    padding: 40px;
+  `
+
+  const descriptionStyle = `
+    font-weight: 500
+  `
+
+  const subContainerStyle = `
+    margin-top: 24px;
+  `
+
+  const subInputStyle = `
+    box-sizing: border-box;
+    background-color: ${inputBackground};
+    border: 0;
+    border-radius: 3px;
+    margin-right: 8px;
+    color: ${inputText}
+
+    &:focus {
+      background-color: ${inputBackgroundFocus};
+      box-shadow: 0 0 0 1px #f093fb;
+      outline: 0px;
+    }
+
+    &::placeholder {
+      color: ${inputPlaceholder};
+      font-weight: 500;
+    }
+  `
+
+  const subButtonStyle = `
+    border-radius: 3px;
+    background-color: ${button};
+  `
+
+  return (
+    <section className="subscribe-section" style={props.style}>
+      <SubscribeCard
+        tinyletterUsername="thomaswang"
+        description="Subscribe and I'll send you my latest blog posts by email. Also, you'll be the first to hear about new things I'm working on. Another tech newsletter 🤷‍"
+        outerCardStyle={outerCardStyle}
+        innerCardStyle={innerCardStyle}
+        descriptionStyle={descriptionStyle}
+        subContainerStyle={subContainerStyle}
+        subInputStyle={subInputStyle}
+        subButtonStyle={subButtonStyle}
+        emailPlaceholder="example@youdabomb.com"
+      />
+    </section>
+  )
+}
+
+const mapStateToProps = state => ({
+  isDarkMode: state.theme.isDarkMode,
+})
+
+export default connect(mapStateToProps)(Subscribe)

@@ -1,0 +1,104 @@
+---
+path: react-live-playground
+date: 2019-10-25
+title: React Live Playground
+description: >-
+  Use this component to let users edit and preview React code, right from the browser page!
+metaImageUrl: "https://www.dropbox.com/s/q8w6sedyiepk29z/react-live-play.jpg?raw=1"
+---
+
+## Editable React Code!
+
+Lookie down here 👇... you can edit and preview this React code 🤯
+
+import ReactLivePlayground from "react-live-playground"
+import dracula from "prism-react-renderer/themes/dracula"
+
+export const code = `
+function Button() {
+  return (
+    <div style={{display: 'flex', justifyContent: 'center'}}>
+      <button
+        onClick={() => alert("Hello World!")}
+        style={{
+          border: 'none',
+          textAlign: 'center',
+          boxSizing: 'border-box',
+          textDecoration: 'none',
+          padding: '10px 40px',
+          cursor: 'pointer',
+          background: '#D4AF37',
+          background: 'linear-gradient(to bottom, #D4AF37 0%, #C5A028 100%)',
+          boxShadow: '0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08)',
+          color: 'white',
+          fontSize: '18px', fontWeight: '700',
+          borderRadius: '25px'
+        }}
+      >
+        Gold button
+      </button>
+    </div>
+  )
+}
+`.trim()
+
+<div className="react-live-playground">
+  <ReactLivePlayground code={code} theme={dracula} />
+</div>
+
+Prety cool, right?
+
+## Instructions and Sample code
+
+You can get this exact thing in your React project, too – a blog, documentation site, whatever!
+
+First install the [react-live-playground NPM package](https://www.npmjs.com/package/react-live-playground) to a React project. Then, simply import it as a regular component and use it as you wish. Make sure to include pass the `code` prop as a string, which can be either pure JSX, a pure functional component, or a React class component. For the full list of props, see the [package README](https://github.com/thomaswang/react-live-playground#props)!
+
+#### Sample
+
+```js
+import ReactLivePlayground from "react-live-playground"
+import dracula from "prism-react-renderer/themes/dracula"
+
+export const code = `
+function Button() {
+  return (
+    <div style={{display: 'flex', justifyContent: 'center'}}>
+      <button
+        onClick={() => alert("Hello World!")}
+        style={{
+          border: 'none',
+          textAlign: 'center',
+          boxSizing: 'border-box',
+          textDecoration: 'none',
+          padding: '10px 40px',
+          cursor: 'pointer',
+          background: '#D4AF37',
+          background: 'linear-gradient(to bottom, #D4AF37 0%, #C5A028 100%)',
+          boxShadow: '0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08)',
+          color: 'white',
+          fontSize: '18px', fontWeight: '700',
+          borderRadius: '25px'
+        }}
+      >
+        Gold button
+      </button>
+    </div>
+  )
+}
+`.trim()
+
+<ReactLivePlayground code={code} theme={dracula} />
+```
+
+_Note_: This sample from above was written in a `.mdx` file, which is an extension of `.md` files that lets you use JSX in your Markdown. I recently refactored [gatsby-personal-starter-blog](https://github.com/thomaswang/gatsby-personal-starter-blog/commit/2bef261cb22800ac3c05f9a2e78b6cb27db1a347) to include [MDX](https://mdxjs.com/). If you also have a Gatsby blog, it's a cool feature to have to show off React components in your blog posts. React Live Playground can be used in a regular React `.js` file just fine though!
+
+## How and why I built this
+
+The good folks over at [Formidabble](https://github.com/FormidableLabs) make some pretty dope tools. They made [component-playground](https://github.com/FormidableLabs/component-playground) and more recently [react-live](https://github.com/FormidableLabs/react-live), which I wrapped to make this component.
+
+I made this component because although the [React Live Demo](https://react-live.netlify.com/) ([demo folder](https://github.com/FormidableLabs/react-live/tree/master/demo)) is nice, having the preview side-by-side with the code is too narrow for my blog. Also, to use React Live out-of-the-box, you have to include 4 separate components – `<LiveProvider />`. `<LiveEditor />`. `<LiveError />`, and `<LivePreview />`.
+
+I'm a believer that things should _just work_, and making this component solved this problem for me. I hope it might be helpful for you as well!
+
+**Happy React-ing!** 👻

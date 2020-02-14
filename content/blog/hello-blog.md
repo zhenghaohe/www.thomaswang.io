@@ -1,0 +1,12 @@
+---
+path: hello-blog
+date: 2019-05-07T13:11:05+00:00
+title: Hello Blog!
+description: >-
+  Hello World! My first post on this new blog 🥇
+metaImageUrl: "https://www.dropbox.com/s/pdcslbptaxo5wwj/hello-blog.jpg?raw=1"
+---
+
+Hey everyone! Welcome to the first post on my personal blog. Thanks for visiting, I'm so glad you're here 🤗
+
+I’ll pop in here periodically to begin documenting things that I learn in the world of front end development (primary JAM stack), practical product design, and tech more broadly. I hope you'll find it useful!
