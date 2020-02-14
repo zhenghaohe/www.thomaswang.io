@@ -2,7 +2,7 @@
 
 ## Adding blog posts
 
-### Regular Markdown posts
+### Regular Markdown posts (deprecated)
 
 - Use Netlify CMS at [www.thomaswang.io/admin](https://www.thomaswang.io/admin)
 
