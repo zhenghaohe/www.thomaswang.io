@@ -117,14 +117,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Montserrat&display=swap", "Merriweather&display=swap"],
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {
         query: `

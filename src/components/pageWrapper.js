@@ -40,12 +40,7 @@ const PageWrapper = props => {
     )
   } else {
     header = (
-      <h3
-        style={{
-          fontFamily: `Montserrat, sans-serif`,
-          marginTop: 0,
-        }}
-      >
+      <h3 style={{ marginTop: 0 }}>
         <Link
           style={{
             boxShadow: `none`,

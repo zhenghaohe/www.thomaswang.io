@@ -8,7 +8,7 @@ const Button = props => (
 )
 
 const ButtonWrapper = styled.button`
-  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   display: block;
   border: none;
   text-align: center;

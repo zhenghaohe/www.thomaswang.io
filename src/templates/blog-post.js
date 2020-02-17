@@ -35,9 +35,7 @@ const BlogPostTemplate = props => {
         url={`https://www.thomaswang.io/blog${slug}`}
         imageUrl={blogMarkdown.metaImageUrl && blogMarkdown.metaImageUrl}
       />
-      <h1 style={{ fontFamily: `'Merriweather','Georgia',serif` }}>
-        {blogMarkdown.title}
-      </h1>
+      <h1>{blogMarkdown.title}</h1>
       <p
         style={{
           ...scale(-1 / 5),

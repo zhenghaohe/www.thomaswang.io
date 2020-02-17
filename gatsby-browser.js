@@ -1,6 +1,6 @@
 // custom typefaces
-import "typeface-montserrat"
 import "typeface-merriweather"
+import "typeface-merriweather-sans"
 
 // Wrap Page
 import CustomLayout from "./wrapPageElement"
