@@ -12035,10 +12035,10 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
-react-subscribe-card@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-subscribe-card/-/react-subscribe-card-2.1.0.tgz#accb41d0d75b1338b4fd4710354f4465d9d62d0e"
-  integrity sha512-6ktweYjt6LSZuuQjlWdCH7AjcS8xKxvSyYw8dsx7fh+6aOrGxxExLeQLKnjK1l4NfMkwRmLWVbIs7541xs3HDQ==
+react-subscribe-card@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-subscribe-card/-/react-subscribe-card-2.1.1.tgz#239cff6a075a515108b9428d0b57f4892bd78152"
+  integrity sha512-MQuWi1cNq5jkGaCqj3AYXLNilAtL9KHbxHnibG03SDB5RcbEL+BVOA2eLpfabpwc7vA4/5p3HV/lgmeB9glURg==
   dependencies:
     react-mailchimp-subscribe "^2.1.0"
     styled-components "^4.4.0"
