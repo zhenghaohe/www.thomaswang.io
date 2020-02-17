@@ -127,8 +127,8 @@ const Bio = props => {
               />
             </AvatarLink>
             <p>
-              Authored by <strong>{author}</strong> who experiments on the web
-              and occasionally has useful things to share.
+              By <strong>{author}</strong> who experiments on the web and
+              occasionally has useful things to share.
               {` `}
               <Social
                 href={`https://t.wang.sh/youtube`}
