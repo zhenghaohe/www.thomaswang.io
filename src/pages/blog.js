@@ -32,7 +32,7 @@ const CardPosts = props => {
               <h3
                 style={{
                   marginTop: 0,
-                  marginBottom: rhythm(1 / 4),
+                  marginBottom: 0,
                 }}
               >
                 {title}
@@ -44,7 +44,7 @@ const CardPosts = props => {
               </small>
               <p
                 style={{
-                  margin: "0 auto",
+                  margin: "0.5rem auto 0",
                 }}
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,

@@ -53,7 +53,7 @@ const InstagramIcon = ({ logoColor }) => (
 
 const GithubIcon = ({ logoColor }) => (
   <svg
-    enable-background="new 0 0 24 24"
+    enableBackground="new 0 0 24 24"
     viewBox="0 0 24 24"
     height="17"
     width="17"
@@ -69,7 +69,7 @@ const GithubIcon = ({ logoColor }) => (
 
 const DribbbleIcon = ({ logoColor }) => (
   <svg
-    enable-background="new 0 0 24 24"
+    enableBackground="new 0 0 24 24"
     viewBox="0 0 24 24"
     height="16"
     width="16"
@@ -85,7 +85,7 @@ const DribbbleIcon = ({ logoColor }) => (
 
 const CodepenIcon = ({ logoColor }) => (
   <svg
-    enable-background="new 0 0 24 24"
+    enableBackground="new 0 0 24 24"
     viewBox="0 0 24 24"
     height="16"
     width="16"
@@ -127,8 +127,9 @@ const Bio = props => {
               />
             </AvatarLink>
             <p>
-              By <strong>{author}</strong> who experiments on the web and
-              occasionally has useful things to share.
+              By <strong>{author}</strong>, who occasionally has useful things
+              to share.
+              <br />
               {` `}
               <Social
                 href={`https://t.wang.sh/youtube`}

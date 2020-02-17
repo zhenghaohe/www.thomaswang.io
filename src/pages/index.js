@@ -31,7 +31,7 @@ const IndexPage = props => {
           textAlign: "center",
         }}
       >
-        Hi there{" "}
+        Hello{" "}
         <Waver>
           <span role="img" aria-label="wave emoji" title="Waving hand">
             👋
@@ -47,10 +47,10 @@ const IndexPage = props => {
         </p>
         <ul>
           <li>
-            Open source work: <a href="https://twang.dev">twang.dev</a>
+            Design portfolio: <a href="https://twang.design">twang.design</a>
           </li>
           <li>
-            Design portfolio: <a href="https://twang.design">twang.design</a>
+            Open source work: <a href="https://twang.dev">twang.dev</a>
           </li>
         </ul>
       </div>

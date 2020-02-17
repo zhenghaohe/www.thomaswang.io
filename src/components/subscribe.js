@@ -44,7 +44,8 @@ const Subscribe = props => {
   `
 
   const descriptionStyle = `
-    font-weight: 500
+    font-size: 0.95rem;
+    font-weight: 400
   `
 
   const subContainerStyle = `
@@ -80,7 +81,7 @@ const Subscribe = props => {
     <section className="subscribe-section" style={props.style}>
       <SubscribeCard
         tinyletterUsername="thomaswang"
-        description="Subscribe and I'll send you my latest blog posts by email. Also, you'll be the first to hear about new things I'm working on. Another tech newsletter 🤷‍"
+        description="Subscribe and I'll send you my latest blog posts by email. Also, you'll be the first to hear about new things I'm working on‍!"
         outerCardStyle={outerCardStyle}
         innerCardStyle={innerCardStyle}
         descriptionStyle={descriptionStyle}
