@@ -10,7 +10,11 @@ import Button from "../components/button"
 import { scale } from "../utils/typography"
 
 const capitalizeFirstLetter = string => {
-  return string.charAt(0).toUpperCase() + string.slice(1)
+  if (string) {
+    return string.charAt(0).toUpperCase() + string.slice(1)
+  } else {
+    return string
+  }
 }
 
 const extractGetValueFromUrl = (key, urlString) => {
