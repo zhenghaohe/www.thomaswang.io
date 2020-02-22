@@ -9,10 +9,20 @@ import SEO from "../components/seo"
 import Button from "../components/button"
 import { scale } from "../utils/typography"
 
+const capitalizeFirstLetter = string => {
+  return string.charAt(0).toUpperCase() + string.slice(1)
+}
+
+const extractGetValueFromUrl = (key, urlString) => {
+  const url = new URL(urlString || window.location.href)
+  const results = url.searchParams.getAll(key)
+  return results.length > 1 ? results[results.length - 1] : results[0]
+}
+
 const IndexPage = props => {
   const siteTitle = "Thomas Wang"
-
   const darkMode = props.isDarkMode
+  let urlPath = capitalizeFirstLetter(extractGetValueFromUrl("ref"))
 
   return (
     <PageWrapper location={props.location} title={siteTitle}>
@@ -31,7 +41,7 @@ const IndexPage = props => {
           textAlign: "center",
         }}
       >
-        Hello{" "}
+        Hello {urlPath}{" "}
         <Waver>
           <span role="img" aria-label="wave emoji" title="Waving hand">
             👋
