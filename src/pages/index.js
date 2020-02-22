@@ -26,7 +26,11 @@ const extractGetValueFromUrl = (key, urlString) => {
 const IndexPage = props => {
   const siteTitle = "Thomas Wang"
   const darkMode = props.isDarkMode
-  let urlPath = capitalizeFirstLetter(extractGetValueFromUrl("ref"))
+
+  let urlPath
+  if (typeof window !== "undefined") {
+    urlPath = capitalizeFirstLetter(extractGetValueFromUrl("ref"))
+  }
 
   return (
     <PageWrapper location={props.location} title={siteTitle}>
