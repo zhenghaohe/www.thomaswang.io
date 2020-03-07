@@ -10,7 +10,7 @@ module.exports = {
     description: `A personal site and blog by Thomas Wang, software developer from California 🌴`,
     siteUrl: `https://www.thomaswang.io/`,
     social: {
-      twitter: `thomaswangio`,
+      twitter: `ThomasWang`,
       instagram: `thomaspwang`,
       github: `thomaswang`,
       dribbble: `thomaswang`,
