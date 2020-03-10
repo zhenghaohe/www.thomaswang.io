@@ -3,11 +3,6 @@
   --bg-color-dark: "#2F3437";
 }
 
-html {
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-}
-
 body {
   background-color: var(--bg-color);
 }
@@ -17,7 +12,6 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
 
