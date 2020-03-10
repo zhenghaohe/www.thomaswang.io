@@ -11,7 +11,6 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <base target="_blank" />
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

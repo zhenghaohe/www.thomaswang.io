@@ -17,3 +17,16 @@ body {
 .no-js .react-switch-handle {
   cursor: not-allowed !important;
 }
+
+.autolink {
+  box-shadow: none;
+  margin-left: 0.5rem;
+}
+
+.autolink:hover {
+  opacity: 0.8;
+}
+
+.autolink > svg {
+  transform: translateY(0.2rem);
+}
