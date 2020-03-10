@@ -3,8 +3,22 @@
   --bg-color-dark: "#2F3437";
 }
 
+html {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+}
+
 body {
   background-color: var(--bg-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,15 +32,28 @@ body {
   cursor: not-allowed !important;
 }
 
-.autolink {
+.anchor {
   box-shadow: none;
-  margin-left: 0.5rem;
+  padding-right: 10px;
+  margin-left: -30px;
+  opacity: 0;
 }
 
-.autolink:hover {
-  opacity: 0.8;
+h1:hover .anchor {
+  opacity: 1;
 }
-
-.autolink > svg {
-  transform: translateY(0.2rem);
+h2:hover .anchor {
+  opacity: 1;
+}
+h3:hover .anchor {
+  opacity: 1;
+}
+h4:hover .anchor {
+  opacity: 1;
+}
+h5:hover .anchor {
+  opacity: 1;
+}
+h6:hover .anchor {
+  opacity: 1;
 }

@@ -20,9 +20,8 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-    scroll-behavior: smooth;
+    line-height: 1.5;
     scroll-margin-top: 1.5rem;
-    line-height: 1.3;
     color: ${({ theme }) => theme.headings};
   }
 
