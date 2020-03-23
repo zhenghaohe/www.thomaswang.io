@@ -11,6 +11,7 @@ import Subscribe from "../components/subscribe"
 import Comments from "../components/comments"
 
 const StyledList = styled.ul`
+  position: relative;
   display: flex;
   justify-content: space-between;
   list-style: none;
@@ -21,12 +22,29 @@ const StyledList = styled.ul`
   }
 `
 
+const StyledListItem = styled.li`
+  @media all and (min-width: 651px) {
+    margin: 0;
+    width: 50%;
+  }
+`
+
+const Breaker = styled.div`
+  @media all and (min-width: 651px) {
+    height: inherit;
+    width: 1px;
+    background: currentcolor;
+  }
+`
+
 const StyledPrev = styled(Link)`
   display: flex;
   align-items: center;
   box-shadow: none;
   padding: 8px 16px;
-  border: 1px solid currentcolor;
+  border-top: 1px solid currentcolor;
+  border-left: 1px solid currentcolor;
+  border-bottom: 1px solid currentcolor;
 
   &:hover {
     background: rgb(38, 188, 251);
@@ -38,6 +56,8 @@ const StyledPrev = styled(Link)`
   }
 
   @media all and (max-width: 650px) {
+    border-right: 1px solid currentcolor;
+
     > div {
       max-width: 100%;
     }
@@ -46,6 +66,7 @@ const StyledPrev = styled(Link)`
 
 const StyledNext = styled(Link)`
   display: flex;
+  justify-content: flex-end;
   align-items: center;
   box-shadow: none;
   padding: 8px 16px;
@@ -64,7 +85,6 @@ const StyledNext = styled(Link)`
 
   @media all and (max-width: 650px) {
     border-left: 1px solid currentcolor;
-    justify-content: flex-end;
 
     > div {
       max-width: 100%;
@@ -130,7 +150,7 @@ const BlogPostTemplate = props => {
       />
       <Bio />
       <StyledList>
-        <li>
+        <StyledListItem>
           {previous && (
             <div>
               <StyledPrev to={`blog${previous.fields.slug}`} rel="prev">
@@ -156,8 +176,9 @@ const BlogPostTemplate = props => {
               </StyledPrev>
             </div>
           )}
-        </li>
-        <li>
+        </StyledListItem>
+        <Breaker />
+        <StyledListItem>
           {next && (
             <div>
               <StyledNext to={`blog${next.fields.slug}`} rel="next">
@@ -183,9 +204,11 @@ const BlogPostTemplate = props => {
               </StyledNext>
             </div>
           )}
-        </li>
+        </StyledListItem>
       </StyledList>
-      <Subscribe />
+      <div style={{ margin: `${rhythm(2)} 0` }}>
+        <Subscribe />
+      </div>
     </PageWrapper>
   )
 }
