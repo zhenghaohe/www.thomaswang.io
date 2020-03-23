@@ -17,7 +17,7 @@ const StyledList = styled.ul`
   padding: 0;
 
   @media all and (max-width: 650px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 `
 
