@@ -12,6 +12,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   ::selection {
     background: #F545B2;
+    color: white;
   }
 
   body {

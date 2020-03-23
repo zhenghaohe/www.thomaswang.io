@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
+import { connect } from "react-redux"
 
 import Bio from "../components/bio"
 import PageWrapper from "../components/pageWrapper"
@@ -16,6 +17,7 @@ const StyledList = styled.ul`
   justify-content: space-between;
   list-style: none;
   padding: 0;
+  margin: 0;
 
   @media all and (max-width: 650px) {
     flex-direction: column-reverse;
@@ -45,9 +47,14 @@ const StyledPrev = styled(Link)`
   border-top: 1px solid currentcolor;
   border-left: 1px solid currentcolor;
   border-bottom: 1px solid currentcolor;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &:hover {
-    background: rgb(38, 188, 251);
+    background: ${props => (props.isDarkMode ? "grey" : "#e1e4e8")};
+
+    > div > svg {
+      transform: scale(1.1);
+    }
   }
 
   > div {
@@ -73,9 +80,14 @@ const StyledNext = styled(Link)`
   border-top: 1px solid currentcolor;
   border-right: 1px solid currentcolor;
   border-bottom: 1px solid currentcolor;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &:hover {
-    background: rgb(38, 188, 251);
+    background: ${props => (props.isDarkMode ? "grey" : "#e1e4e8")};
+
+    > div > svg {
+      transform: scale(1.1);
+    }
   }
 
   > div {
@@ -109,6 +121,7 @@ const BlogPostTemplate = props => {
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next, slug } = props.pageContext
   const timeToRead = formatReadingTime(post.timeToRead)
+  const isDarkMode = props.isDarkMode
 
   return (
     <PageWrapper location={props.location} title={siteTitle}>
@@ -153,7 +166,11 @@ const BlogPostTemplate = props => {
         <StyledListItem>
           {previous && (
             <div>
-              <StyledPrev to={`blog${previous.fields.slug}`} rel="prev">
+              <StyledPrev
+                to={`blog${previous.fields.slug}`}
+                rel="prev"
+                isDarkMode={isDarkMode}
+              >
                 <div style={{ display: "grid", placeitems: "center" }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +198,11 @@ const BlogPostTemplate = props => {
         <StyledListItem>
           {next && (
             <div>
-              <StyledNext to={`blog${next.fields.slug}`} rel="next">
+              <StyledNext
+                to={`blog${next.fields.slug}`}
+                rel="next"
+                isDarkMode={isDarkMode}
+              >
                 <div>{next.frontmatter.title}</div>
                 <div style={{ display: "grid", placeitems: "center" }}>
                   <svg
@@ -213,7 +234,11 @@ const BlogPostTemplate = props => {
   )
 }
 
-export default BlogPostTemplate
+const mapStateToProps = state => ({
+  isDarkMode: state.theme.isDarkMode,
+})
+
+export default connect(mapStateToProps)(BlogPostTemplate)
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
