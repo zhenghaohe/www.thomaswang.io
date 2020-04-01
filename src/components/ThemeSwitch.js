@@ -9,15 +9,15 @@ const ThemeSwitch = ({ isDarkMode, toggleTheme }) => {
   const darkMode = isDarkMode
 
   const labelColor = isDarkMode
-    ? "rgba(255, 255, 255, 0.3)"
-    : "rgba(55, 53, 47, 0.3)"
+    ? "rgba(255, 255, 255, 0.4)"
+    : "rgba(55, 53, 47, 0.4)"
 
   return (
     <SwitchContainer>
       <label
         htmlFor="theme-switcher"
         style={{
-          marginRight: "12px",
+          marginRight: "16px",
           display: "flex",
           alignItems: "center",
         }}
@@ -65,7 +65,7 @@ const ThemeSwitch = ({ isDarkMode, toggleTheme }) => {
       <label
         htmlFor="theme-switcher"
         style={{
-          marginLeft: "12px",
+          marginLeft: "16px",
           display: "flex",
           alignItems: "center",
         }}
