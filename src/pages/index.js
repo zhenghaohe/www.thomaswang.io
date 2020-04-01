@@ -56,14 +56,21 @@ const IndexPage = props => {
           </span>
         </Waver>
       </h1>
-      <div style={{ margin: "3rem 0.5rem" }}>
+      <div style={{ margin: "3rem 1rem" }}>
         <p>
-          I'm Thomas Wang – I design and develop digital products. My favorite
-          products are functional with subtle interactions. I am constantly
-          inspired by the community of creative people on the web, and I try to
-          give back.
+          I'm Thomas Wang and I create digital products. My favorite products
+          are functional with subtle interactions. I am constantly inspired by
+          the community of creative people on the web, and I try to give back.
         </p>
-        <p style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
+        <div
+          style={{
+            margin: "1.5rem 0",
+            display: "flex",
+            alignItems: "center",
+            flexWrap: "wrap",
+            whiteSpace: "nowrap",
+          }}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -85,8 +92,16 @@ const IndexPage = props => {
           <a href="https://twang.design" style={{ marginLeft: "4px" }}>
             twang.design
           </a>
-        </p>
-        <p style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
+        </div>
+        <div
+          style={{
+            margin: "1.5rem 0",
+            display: "flex",
+            alignItems: "center",
+            flexWrap: "wrap",
+            whiteSpace: "nowrap",
+          }}
+        >
           <svg
             height="18"
             width="18"
@@ -108,7 +123,7 @@ const IndexPage = props => {
           <a href="https://twang.dev" style={{ marginLeft: "4px" }}>
             twang.dev
           </a>
-        </p>
+        </div>
       </div>
       <Link to="/blog/">
         <Button
