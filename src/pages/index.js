@@ -63,14 +63,52 @@ const IndexPage = props => {
           inspired by the community of creative people on the web, and I try to
           give back.
         </p>
-        <ul>
-          <li>
-            Design portfolio: <a href="https://twang.design">twang.design</a>
-          </li>
-          <li>
-            Open source work: <a href="https://twang.dev">twang.dev</a>
-          </li>
-        </ul>
+        <p style={{ display: "flex", alignItems: "center" }}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            style={{ marginRight: "8px" }}
+          >
+            <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+            <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+            <path d="M2 2l7.586 7.586"></path>
+            <circle cx="11" cy="11" r="2"></circle>
+          </svg>
+          Design portfolio:
+          <a href="https://twang.design" style={{ marginLeft: "4px" }}>
+            twang.design
+          </a>
+        </p>
+        <p style={{ display: "flex", alignItems: "center" }}>
+          <svg
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ marginRight: "8px" }}
+          >
+            <path
+              d="m11.7 4.3c-.3811429.38884351-.3811429 1.01115649 0 1.4l1.6 1.6c.3888435.38114288 1.0111565.38114288 1.4 0l3.77-3.77c1.029602 2.27526348.5421924 4.95036447-1.2237216 6.7162784-1.7659139 1.765914-4.4410149 2.2533236-6.7162784 1.2237216l-6.91 6.91c-.82842712.8284271-2.17157288.8284271-3 0-.82842713-.8284271-.82842713-2.1715729 0-3l6.91-6.91c-1.02960202-2.27526348-.54219239-4.95036447 1.22372157-6.71627843 1.76591393-1.76591396 4.44101493-2.25332359 6.71627843-1.22372157l-3.76 3.76z"
+              fill="none"
+              stroke="currentcolor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              transform="matrix(-1 0 0 1 20 1)"
+            />
+          </svg>
+          Open source work:{" "}
+          <a href="https://twang.dev" style={{ marginLeft: "4px" }}>
+            twang.dev
+          </a>
+        </p>
       </div>
       <Link to="/blog/">
         <Button
