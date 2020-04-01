@@ -9,8 +9,8 @@ const ThemeSwitch = ({ isDarkMode, toggleTheme }) => {
   const darkMode = isDarkMode
 
   const labelColor = isDarkMode
-    ? "rgba(255, 255, 255, 0.4)"
-    : "rgba(55, 53, 47, 0.4)"
+    ? "rgba(255, 255, 255, 0.5)"
+    : "rgba(55, 53, 47, 0.5)"
 
   return (
     <SwitchContainer>

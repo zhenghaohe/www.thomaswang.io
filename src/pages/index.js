@@ -56,18 +56,18 @@ const IndexPage = props => {
           </span>
         </Waver>
       </h1>
-      <div style={{ margin: "3rem 1rem" }}>
+      <div style={{ margin: "3rem 0.5rem" }}>
         <p>
           I'm Thomas Wang – I design and develop digital products. My favorite
           products are functional with subtle interactions. I am constantly
           inspired by the community of creative people on the web, and I try to
           give back.
         </p>
-        <p style={{ display: "flex", alignItems: "center" }}>
+        <p style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="18"
+            height="18"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -86,11 +86,11 @@ const IndexPage = props => {
             twang.design
           </a>
         </p>
-        <p style={{ display: "flex", alignItems: "center" }}>
+        <p style={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}>
           <svg
-            height="24"
+            height="18"
+            width="18"
             viewBox="0 0 24 24"
-            width="24"
             xmlns="http://www.w3.org/2000/svg"
             style={{ marginRight: "8px" }}
           >
@@ -104,7 +104,7 @@ const IndexPage = props => {
               transform="matrix(-1 0 0 1 20 1)"
             />
           </svg>
-          Open source work:{" "}
+          Open source projects:
           <a href="https://twang.dev" style={{ marginLeft: "4px" }}>
             twang.dev
           </a>
