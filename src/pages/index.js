@@ -289,6 +289,7 @@ const Waver = styled.span`
 const Socials = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   max-width: 100%;
   width: 30rem;
   margin: 0 auto;
