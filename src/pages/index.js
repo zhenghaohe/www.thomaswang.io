@@ -268,6 +268,7 @@ const wave = keyframes`
 const Icon = styled.img`
   position: relative;
   margin-top: 32px;
+  margin-right: 32px;
   width: 40px;
 `
 
@@ -290,6 +291,7 @@ const Socials = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   max-width: 100%;
   width: 30rem;
   margin: 0 auto;
