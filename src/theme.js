@@ -23,7 +23,7 @@ export const lightTheme = {
 
 export const darkTheme = {
   theme: "dark",
-  body: "#2F3437",
+  body: "#232629",
   headings: "rgb(255, 255, 255)",
   text: "rgba(255, 255, 255, 0.9)",
   labels: "rgba(255, 255, 255, 0.6)",
@@ -32,7 +32,7 @@ export const darkTheme = {
 
   buttonBackground: "#26bcfb",
 
-  cardBackground: "#373C3F",
+  cardBackground: "#292c2f",
   cardText: "#B1B1B5",
   cardBorder: "#2D2D2E",
   cardBoxShadow: "0 20px 40px rgba(0,0,0,.25)",

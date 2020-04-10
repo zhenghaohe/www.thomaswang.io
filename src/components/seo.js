@@ -104,7 +104,7 @@ function SEO({
         lang,
       }}
       title={title}
-      titleTemplate={`%s - ${site.siteMetadata.title}`}
+      titleTemplate={`${site.siteMetadata.title}  - %s `}
       meta={metaTags
         .concat(
           metaKeywords.length > 0

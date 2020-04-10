@@ -29,9 +29,9 @@ const ThemeSwitch = ({ isDarkMode, toggleTheme }) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke={labelColor}
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           style={{ fill: "none" }}
         >
           <circle cx="12" cy="12" r="5"></circle>
@@ -77,9 +77,9 @@ const ThemeSwitch = ({ isDarkMode, toggleTheme }) => {
           viewBox="0 0 24 24"
           fill="none"
           stroke={labelColor}
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
           style={{ fill: "none" }}
         >
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
@@ -99,10 +99,7 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ThemeSwitch)
+export default connect(mapStateToProps, mapDispatchToProps)(ThemeSwitch)
 
 const SwitchContainer = styled.div`
   display: flex;

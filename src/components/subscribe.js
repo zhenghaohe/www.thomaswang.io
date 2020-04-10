@@ -5,8 +5,8 @@ import { connect } from "react-redux"
 const Subscribe = props => {
   const lightTheme = !props.isDarkMode
   const darkTheme = props.isDarkMode
-  const background = lightTheme ? "#ffffff" : "#373C3F"
-  const border = lightTheme ? "#F5F5F5" : "#32373A"
+  const background = lightTheme ? "#ffffff" : "#292c2f"
+  const border = lightTheme ? "#F5F5F5" : "#292c2f"
   const inputBackground = lightTheme ? "#f5f5f5" : "#494D50"
   const inputBackgroundFocus = lightTheme ? "#fff" : "#000"
   const inputPlaceholder = darkTheme && "rgba(255, 255, 255, 0.6)"
