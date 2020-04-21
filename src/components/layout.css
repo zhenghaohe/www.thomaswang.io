@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--bg-color) !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -12,12 +12,6 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--bg-color-dark);
   }
 }
 

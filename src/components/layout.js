@@ -14,6 +14,10 @@ const Layout = props => {
     if (isDarkMode) {
       props.setDark()
     }
+
+    if (typeof document !== "undefined") {
+      document.getElementById("___gatsby").style.opacity = 1
+    }
   }, [props])
 
   const darkMode = prefersDarkMode()
@@ -37,7 +41,4 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Layout)
+export default connect(mapStateToProps, mapDispatchToProps)(Layout)
