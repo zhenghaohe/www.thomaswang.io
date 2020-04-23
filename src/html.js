@@ -22,7 +22,7 @@ export default function HTML(props) {
             right: "16px",
             top: "16px",
             fontWeight: "500",
-            fontFamily: `-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif`,
+            fontFamily: `system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif`,
           }}
         >
           JavaScript is 🚫. This site 🏃‍♂️💨 better with it on.
