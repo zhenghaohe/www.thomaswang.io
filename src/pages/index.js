@@ -208,19 +208,6 @@ const IndexPage = props => {
           Blog
         </Button>
       </Link>
-
-      <div style={{ margin: "5rem 0" }}>
-        <h2 style={{ textAlign: "center" }}>My Work</h2>
-        <p style={{ textAlign: "center" }}>
-          <a href="https://twang.dev" style={{ marginRight: "0.5rem" }}>
-            twang.dev
-          </a>
-          {"  "}|{"  "}
-          <a href="https://twang.design" style={{ marginLeft: "0.5rem" }}>
-            twang.design
-          </a>
-        </p>
-      </div>
     </PageWrapper>
   )
 }
