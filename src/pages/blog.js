@@ -86,14 +86,6 @@ const Blog = props => {
         <CardPosts posts={posts} isDarkMode={isDarkMode} theme={theme} />
       </div>
       <hr style={{ marginTop: rhythm(3), marginBottom: rhythm(2) }} />
-      <div className="systemfont" style={{ textAlign: "center" }}>
-        Do you like this blog?
-        <br />
-        ↓
-        <br />
-        See the <Link to="/analytics/">analytics</Link> &{" "}
-        <a href="https://t.wang.sh/sponsor-blog">become a sponsor</a>.
-      </div>
       <Subscribe style={{ margin: "4rem 0 5rem" }} />
     </PageWrapper>
   )
