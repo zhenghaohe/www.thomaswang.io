@@ -47,6 +47,7 @@ const StyledPrev = styled(Link)`
   border-top: 1px solid currentcolor;
   border-left: 1px solid currentcolor;
   border-bottom: 1px solid currentcolor;
+  border-radius: 3px 0 0 3px;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &:hover {
@@ -64,6 +65,7 @@ const StyledPrev = styled(Link)`
 
   @media all and (max-width: 650px) {
     border-right: 1px solid currentcolor;
+    border-radius: 3px;
 
     > div {
       max-width: 100%;
@@ -80,6 +82,7 @@ const StyledNext = styled(Link)`
   border-top: 1px solid currentcolor;
   border-right: 1px solid currentcolor;
   border-bottom: 1px solid currentcolor;
+  border-radius: 0 3px 3px 0;
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &:hover {
@@ -97,6 +100,7 @@ const StyledNext = styled(Link)`
 
   @media all and (max-width: 650px) {
     border-left: 1px solid currentcolor;
+    border-radius: 3px;
 
     > div {
       max-width: 100%;
@@ -157,8 +161,8 @@ const BlogPostTemplate = props => {
       </div>
       <hr
         style={{
-          marginTop: rhythm(1),
-          marginBottom: rhythm(1),
+          marginTop: rhythm(1.5),
+          marginBottom: rhythm(1.5),
         }}
       />
       <Bio />
@@ -179,7 +183,7 @@ const BlogPostTemplate = props => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     style={{ marginRight: "16px" }}
@@ -189,7 +193,12 @@ const BlogPostTemplate = props => {
                     <line x1="16" y1="12" x2="8" y2="12"></line>
                   </svg>
                 </div>
-                <div>{previous.frontmatter.title}</div>
+                <div>
+                  <div style={{ fontSize: "0.8rem", fontStyle: "italic" }}>
+                    Previous
+                  </div>
+                  <div>{previous.frontmatter.title}</div>
+                </div>
               </StyledPrev>
             </div>
           )}
@@ -203,7 +212,12 @@ const BlogPostTemplate = props => {
                 rel="next"
                 isDarkMode={isDarkMode}
               >
-                <div>{next.frontmatter.title}</div>
+                <div>
+                  <div style={{ fontSize: "0.8rem", fontStyle: "italic" }}>
+                    Next
+                  </div>
+                  <div>{next.frontmatter.title}</div>
+                </div>
                 <div style={{ display: "grid", placeitems: "center" }}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +226,7 @@ const BlogPostTemplate = props => {
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
-                    strokeWidth="2"
+                    strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     style={{ marginLeft: "16px" }}
@@ -227,7 +241,7 @@ const BlogPostTemplate = props => {
           )}
         </StyledListItem>
       </StyledList>
-      <div style={{ margin: `${rhythm(2)} 0` }}>
+      <div style={{ margin: `${rhythm(2.5)} 0` }}>
         <Subscribe />
       </div>
     </PageWrapper>

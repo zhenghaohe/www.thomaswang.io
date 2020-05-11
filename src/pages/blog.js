@@ -85,7 +85,7 @@ const Blog = props => {
       <div style={{ margin: `20px 0 ${rhythm(2)}` }}>
         <CardPosts posts={posts} isDarkMode={isDarkMode} theme={theme} />
       </div>
-      <hr style={{ marginBottom: rhythm(2) }} />
+      <hr style={{ marginTop: rhythm(3), marginBottom: rhythm(2) }} />
       <div className="systemfont" style={{ textAlign: "center" }}>
         Do you like this blog?
         <br />

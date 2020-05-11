@@ -5,7 +5,6 @@ export const lightTheme = {
   text: "rgb(55, 53, 47)",
   labels: "rgba(55, 53, 47, 0.6)",
   codeHighlight: "rgba(135,131,120,0.15)",
-  hr: "rgb(245, 239, 228)",
 
   buttonBackground: "black",
 
@@ -28,7 +27,6 @@ export const darkTheme = {
   text: "rgba(255, 255, 255, 0.9)",
   labels: "rgba(255, 255, 255, 0.6)",
   codeHighlight: "rgba(135,131,120,0.15)",
-  hr: "rgba(0, 0, 0, 0.3)",
 
   buttonBackground: "#26bcfb",
 
