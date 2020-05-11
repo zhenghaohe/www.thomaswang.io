@@ -63,7 +63,7 @@ const StyledPrev = styled(Link)`
   }
 
   @media all and (max-width: 650px) {
-    border-right: 1px solid navBorder;
+    border-right: 1px solid ${({ theme }) => theme.navBorder};
 
     > div {
       max-width: 100%;
@@ -96,7 +96,7 @@ const StyledNext = styled(Link)`
   }
 
   @media all and (max-width: 650px) {
-    border-left: 1px solid navBorder;
+    border-left: 1px solid ${({ theme }) => theme.navBorder};
 
     > div {
       max-width: 100%;
