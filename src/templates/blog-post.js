@@ -35,7 +35,7 @@ const Breaker = styled.div`
   @media all and (min-width: 651px) {
     height: inherit;
     width: 1px;
-    background: currentcolor;
+    background: ${({ theme }) => theme.navBorder};
   }
 `
 
@@ -43,11 +43,10 @@ const StyledPrev = styled(Link)`
   display: flex;
   align-items: center;
   box-shadow: none;
-  padding: 8px 16px;
-  border-top: 1px solid currentcolor;
-  border-left: 1px solid currentcolor;
-  border-bottom: 1px solid currentcolor;
-  border-radius: 3px 0 0 3px;
+  padding: 16px;
+  border-top: 1px solid ${({ theme }) => theme.navBorder};
+  border-left: 1px solid ${({ theme }) => theme.navBorder};
+  border-bottom: 1px solid ${({ theme }) => theme.navBorder};
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &:hover {
@@ -64,8 +63,7 @@ const StyledPrev = styled(Link)`
   }
 
   @media all and (max-width: 650px) {
-    border-right: 1px solid currentcolor;
-    border-radius: 3px;
+    border-right: 1px solid navBorder;
 
     > div {
       max-width: 100%;
@@ -78,11 +76,10 @@ const StyledNext = styled(Link)`
   justify-content: flex-end;
   align-items: center;
   box-shadow: none;
-  padding: 8px 16px;
-  border-top: 1px solid currentcolor;
-  border-right: 1px solid currentcolor;
-  border-bottom: 1px solid currentcolor;
-  border-radius: 0 3px 3px 0;
+  padding: 16px;
+  border-top: 1px solid ${({ theme }) => theme.navBorder};
+  border-right: 1px solid ${({ theme }) => theme.navBorder};
+  border-bottom: 1px solid ${({ theme }) => theme.navBorder};
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &:hover {
@@ -99,8 +96,7 @@ const StyledNext = styled(Link)`
   }
 
   @media all and (max-width: 650px) {
-    border-left: 1px solid currentcolor;
-    border-radius: 3px;
+    border-left: 1px solid navBorder;
 
     > div {
       max-width: 100%;

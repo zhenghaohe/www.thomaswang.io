@@ -18,6 +18,7 @@ export const lightTheme = {
     "0 7px 25px 0 rgba(0, 0, 0, 0.03), 0 4px 12px 0 rgba(0, 0, 0, 0.03)",
 
   livePreviewBackground: "white",
+  navBorder: "#e1e4e8",
 }
 
 export const darkTheme = {
@@ -39,6 +40,7 @@ export const darkTheme = {
     "0 7px 25px 0 rgba(255, 255, 255, 0.03), 0 4px 12px 0 rgba(255, 255, 255, 0.03)",
 
   livePreviewBackground: "rgb(1, 22, 39)",
+  navBorder: "grey",
 }
 
 export const theme = isDarkMode => {
