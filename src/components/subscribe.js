@@ -14,6 +14,7 @@ const Subscribe = props => {
   const button = darkTheme && "#26bcfb"
 
   const outerCardStyle = `
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     padding: 0;
     background-color: ${border};
     border-radius: 4px;
@@ -39,20 +40,28 @@ const Subscribe = props => {
   `
 
   const innerCardStyle = `
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     background-color: ${background};
     padding: 40px;
   `
 
+  const titleStyle = `
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  `
+
   const descriptionStyle = `
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 0.95rem;
     font-weight: 400
   `
 
   const subContainerStyle = `
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin-top: 24px;
   `
 
   const subInputStyle = `
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     box-sizing: border-box;
     background-color: ${inputBackground};
     border: 0;
@@ -73,6 +82,7 @@ const Subscribe = props => {
   `
 
   const subButtonStyle = `
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     border-radius: 3px;
     background-color: ${button};
   `
@@ -81,9 +91,10 @@ const Subscribe = props => {
     <section className="subscribe-section" style={props.style}>
       <SubscribeCard
         tinyletterUsername="thomaswang"
-        description="Subscribe and I'll send you my latest blog posts by email. Also, you'll be the first to hear about new things I'm working on‍!"
+        description="I'll send you my latest blog posts by email. Also, you'll be the first to hear about new things I'm working on‍!"
         outerCardStyle={outerCardStyle}
         innerCardStyle={innerCardStyle}
+        titleStyle={titleStyle}
         descriptionStyle={descriptionStyle}
         subContainerStyle={subContainerStyle}
         subInputStyle={subInputStyle}

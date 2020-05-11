@@ -79,7 +79,7 @@ const PageWrapper = props => {
       </div>
       <ThemeSwitch />
       <Footer>
-        © 2019 - {new Date().getFullYear()}, Thomas Wang.{" "}
+        © 2019 - {new Date().getFullYear()} Thomas Wang.{" "}
         <a href="https://github.com/thomaswang/www.thomaswang.io">
           Source code
         </a>
@@ -100,9 +100,9 @@ const Wrapper = styled.div`
 `
 
 const Footer = styled.footer`
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  font-size: 1rem;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9375rem;
   text-align: center;
   margin: 16px auto 48px;
 `
