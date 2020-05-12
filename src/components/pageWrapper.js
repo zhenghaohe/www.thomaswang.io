@@ -79,7 +79,7 @@ const PageWrapper = props => {
       </div>
       <ThemeSwitch />
       <Footer>
-        © 2019 - {new Date().getFullYear()} Thomas Wang.{" "}
+        © 2019 - {new Date().getFullYear()}, Thomas Wang.{" "}
         <a href="https://github.com/thomaswang/www.thomaswang.io">
           Source code
         </a>
