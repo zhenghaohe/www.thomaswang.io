@@ -19,6 +19,10 @@ export const GlobalStyles = createGlobalStyle`
     color: white;
   }
 
+  html, body {
+    min-width: 360px;
+  }
+
   body {
     background-color: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
