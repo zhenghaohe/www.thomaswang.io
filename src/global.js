@@ -79,7 +79,7 @@ export const GlobalStyles = createGlobalStyle`
   @media all and (max-width: 650px) {
     pre, .react-live-playground{
       width: 100vw;
-      transform: translateX(-20px);
+      transform: translateX(-1.365rem);
     }
   }
 
