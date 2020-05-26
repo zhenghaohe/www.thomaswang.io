@@ -137,7 +137,7 @@ const SuperBio = props => {
                 href={`https://t.wang.sh/youtube`}
                 alt="youtube"
                 aria-label="youtube link"
-                style={{ marginTop: "15px", marginLeft: 0 }}
+                style={{ marginTop: "12px", marginLeft: 0 }}
               >
                 <YoutubeIcon logoColor={logoColor} />
               </Social>

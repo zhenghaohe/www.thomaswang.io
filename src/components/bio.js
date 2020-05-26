@@ -135,7 +135,7 @@ const Bio = props => {
                 href={`https://t.wang.sh/youtube`}
                 alt="youtube"
                 aria-label="youtube link"
-                style={{ marginTop: "5px", marginLeft: 0 }}
+                style={{ marginTop: "3px", marginLeft: 0 }}
               >
                 <YoutubeIcon logoColor={logoColor} />
               </Social>

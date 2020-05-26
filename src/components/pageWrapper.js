@@ -13,6 +13,15 @@ const Back = styled.p`
   margin: 0;
 `
 
+const TheH2 = styled.h2`
+  margin: 0 auto 3rem;
+  text-align: center;
+
+  @media all and (max-width: 767px) {
+    margin: 0 auto 2rem;
+  }
+`
+
 const StyledH2Link = styled(Link)`
   box-shadow: none;
   text-decoration: none;
@@ -21,6 +30,17 @@ const StyledH2Link = styled(Link)`
 
   &:hover {
     opacity: 0.8;
+  }
+`
+
+const InnerWrapper = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${props => props.maxWidth || rhythm(24)};
+  padding: 2.75rem 1rem 0;
+
+  @media all and (max-width: 767px) {
+    padding: 1rem 1rem 0;
   }
 `
 
@@ -61,7 +81,7 @@ const PageWrapper = props => {
     )
   } else if (location.pathname.includes("blog")) {
     header = (
-      <h2 style={{ margin: "0 auto 3rem", textAlign: "center" }}>
+      <TheH2>
         <StyledH2Link to={`/blog/`}>
           c
           <Sunglasses2 aria-label="sunglasses" viewBox="0 0 298 298" width="35">
@@ -72,7 +92,7 @@ const PageWrapper = props => {
           </Sunglasses2>
           l blog
         </StyledH2Link>
-      </h2>
+      </TheH2>
     )
   } else {
     header = null
@@ -80,18 +100,10 @@ const PageWrapper = props => {
 
   return (
     <Wrapper>
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: props.maxWidth || rhythm(24),
-          padding: `2.75rem 1rem`,
-          paddingBottom: 0,
-        }}
-      >
+      <InnerWrapper maxWidth={props.maxWidth}>
         <header>{header}</header>
         <main>{children}</main>
-      </div>
+      </InnerWrapper>
       <ThemeSwitch />
       <Footer>
         © 2019 - {new Date().getFullYear()}, Thomas Wang.{" "}

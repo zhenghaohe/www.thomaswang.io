@@ -34,7 +34,6 @@ const SocialMedia = props => (
             href={`https://t.wang.sh/youtube`}
             alt="youtube"
             aria-label="youtube link"
-            style={{ marginTop: "4px" }}
           >
             <svg
               enableBackground="new 0 0 512 512"
