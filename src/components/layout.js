@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { connect } from "react-redux"
 import { ThemeProvider } from "styled-components"
 
@@ -10,6 +10,14 @@ import "./layout.css"
 const Layout = props => {
   const darkMode = prefersDarkMode()
   const userTheme = theme(darkMode || props.isDarkMode)
+
+  useEffect(() => {
+    const isDarkMode = prefersDarkMode()
+
+    if (isDarkMode) {
+      props.setDark()
+    }
+  }, [props])
 
   return (
     <ThemeProvider theme={userTheme}>

@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import { connect } from "react-redux"
 import "what-input"
 
-import { prefersDarkMode } from "../utils/prefersDarkMode"
 import { rhythm, scale } from "../utils/typography"
 import ThemeSwitch from "../components/ThemeSwitch"
 
@@ -56,18 +55,6 @@ const PageWrapper = props => {
   const fillColor = darkMode ? "rgb(255, 255, 255)" : "rgb(4, 4, 2)"
   const labelColor = darkMode ? "rgba(255, 255, 255, 0.8)" : "rgb(55, 53, 47)"
 
-  const [opacity, setOpacity] = useState(0)
-
-  useEffect(() => {
-    const isDarkMode = prefersDarkMode()
-
-    if (isDarkMode) {
-      props.setDark()
-    }
-
-    setOpacity(1)
-  }, [props])
-
   if (location.pathname === blogPath) {
     header = (
       <>
@@ -115,7 +102,7 @@ const PageWrapper = props => {
   }
 
   return (
-    <Wrapper opacity={opacity}>
+    <Wrapper>
       <InnerWrapper maxWidth={props.maxWidth}>
         <header>{header}</header>
         <main>{children}</main>
@@ -136,17 +123,10 @@ const mapStateToProps = state => ({
   isDarkMode: state.theme.isDarkMode,
 })
 
-const mapDispatchToProps = dispatch => {
-  return {
-    setDark: () => dispatch({ type: "SET_DARK" }),
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(PageWrapper)
+export default connect(mapStateToProps)(PageWrapper)
 
 const Wrapper = styled.div`
   min-height: 100vh;
-  opacity: ${props => props.opacity};
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 `
 
