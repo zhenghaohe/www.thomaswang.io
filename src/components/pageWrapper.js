@@ -27,7 +27,7 @@ const StyledH2Link = styled(Link)`
   box-shadow: none;
   text-decoration: none;
   color: ${props =>
-    props.darkMode ? "rgba(255, 255, 255, 0.8)" : "rgb(55, 53, 47)"};
+    props.darkMode ? "rgba(255, 255, 255, 0.87)" : "rgb(55, 53, 47)"};
   transition: none;
 
   &:hover {
