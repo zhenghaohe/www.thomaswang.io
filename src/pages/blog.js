@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { connect } from "react-redux"
 
 import { rhythm } from "../utils/typography"
-import Bio from "../components/bio"
+import SuperBio from "../components/superbio"
 import PageWrapper from "../components/pageWrapper"
 import SEO from "../components/seo"
 import Button from "../components/button"
@@ -96,7 +96,7 @@ const Blog = props => {
   return (
     <PageWrapper location={location} title={siteTitle}>
       <SEO title="Blog / Thomas Wang" url="https://www.thomaswang.io/blog/" />
-      <Bio />
+      <SuperBio />
       <div style={{ margin: `20px 0 ${rhythm(2)}` }}>
         <CardPosts posts={posts} isDarkMode={isDarkMode} theme={theme} />
       </div>

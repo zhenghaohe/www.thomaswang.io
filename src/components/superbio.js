@@ -99,7 +99,7 @@ const CodepenIcon = ({ logoColor }) => (
   </svg>
 )
 
-const Bio = props => {
+const SuperBio = props => {
   const logoColor = props.isDarkMode
     ? "rgba(255, 255, 255, 0.9)"
     : "rgb(55, 53, 47)"
@@ -118,7 +118,9 @@ const Bio = props => {
                 style={{
                   marginRight: rhythm(1 / 2),
                   marginBottom: 0,
-                  minWidth: 50,
+                  width: 90,
+                  height: 90,
+                  minWidth: 90,
                   borderRadius: `100%`,
                 }}
                 imgStyle={{
@@ -135,7 +137,7 @@ const Bio = props => {
                 href={`https://t.wang.sh/youtube`}
                 alt="youtube"
                 aria-label="youtube link"
-                style={{ marginTop: "5px", marginLeft: 0 }}
+                style={{ marginTop: "15px", marginLeft: 0 }}
               >
                 <YoutubeIcon logoColor={logoColor} />
               </Social>
@@ -143,7 +145,7 @@ const Bio = props => {
                 href={`https://twitter.com/${social.twitter}`}
                 alt="twitter"
                 aria-label="twitter link"
-                style={{ margin: "0 4px" }}
+                style={{ margin: "0 12px" }}
               >
                 <TwitterIcon logoColor={logoColor} />
               </Social>
@@ -190,7 +192,7 @@ const Bio = props => {
 }
 
 const bioQuery = graphql`
-  query BioQuery {
+  query SuperBioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
@@ -217,16 +219,19 @@ const mapStateToProps = state => ({
   isDarkMode: state.theme.isDarkMode,
 })
 
-export default connect(mapStateToProps)(Bio)
+export default connect(mapStateToProps)(SuperBio)
 
 const Container = styled.div`
   display: flex;
+  flex-direction: column;
+  text-align: center;
 `
 
 export const AvatarLink = styled(Link)`
   text-decoration: none;
   box-shadow: none;
   color: #ffffff;
+  margin-bottom: 0.5rem;
 
   &:hover {
     opacity: 0.75;
@@ -236,7 +241,7 @@ export const AvatarLink = styled(Link)`
 const Social = styled.a`
   vertical-align: middle;
   display: inline-block;
-  margin: auto 4px;
+  margin: 8px 12px;
   text-decoration: none;
   box-shadow: none;
   color: #ffffff;
@@ -256,7 +261,7 @@ const RSSLink = styled.a`
   text-decoration: underline;
   box-shadow: none;
   color: ${props => props.logoColor};
-  margin-left: 4px;
+  margin-left: 12px;
 
   &:hover {
     opacity: 0.75;

@@ -4,6 +4,7 @@ export const lightTheme = {
   headings: "rgb(4, 4, 2)",
   text: "rgb(55, 53, 47)",
   labels: "rgba(55, 53, 47, 0.6)",
+  titleLabel: "rgb(55, 53, 47)",
   codeHighlight: "rgba(135,131,120,0.15)",
 
   buttonBackground: "black",
@@ -30,6 +31,7 @@ export const darkTheme = {
   headings: "rgb(255, 255, 255)",
   text: "rgba(255, 255, 255, 0.9)",
   labels: "rgba(255, 255, 255, 0.6)",
+  titleLabel: "rgba(255, 255, 255, 0.6)",
   codeHighlight: "rgba(135,131,120,0.15)",
 
   buttonBackground: "#26bcfb",
