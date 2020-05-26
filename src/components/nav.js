@@ -1,42 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { connect } from "react-redux"
 
 import { rhythm } from "../utils/typography"
-
-const Nav = props => {
-  let homeFocused = false
-  let projectsFocused = false
-  let aboutFocused = false
-
-  if (props.focused === "home") {
-    homeFocused = true
-  } else if (props.focused === "projects") {
-    projectsFocused = true
-  } else if (props.focused === "about") {
-    aboutFocused = true
-  }
-
-  return (
-    <StyledNav>
-      <Link to="/">
-        <StyledLeftContainer focused={homeFocused}>Home</StyledLeftContainer>
-      </Link>
-      <Breaker />
-      <Link to="/projects/">
-        <StyledMiddleContainer focused={projectsFocused}>
-          Projects
-        </StyledMiddleContainer>
-      </Link>
-      <Breaker />
-      <Link to="/about/">
-        <StyledRightContainer focused={aboutFocused}>
-          About
-        </StyledRightContainer>
-      </Link>
-    </StyledNav>
-  )
-}
 
 const StyledNav = styled.nav`
   font-family: "Permanent Marker", cursive;
@@ -49,17 +16,13 @@ const StyledNav = styled.nav`
   a {
     box-shadow: none;
   }
-
-  &:hover {
-    box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
-  }
 `
 
 const StyledContainer = styled.div`
   display: inline-block;
   background-color: transparent;
-  color: ${({ theme }) => theme.text};
-  border: 2px solid ${({ theme }) => theme.headerNav};
+  color: ${props => (props.darkMode ? "white" : "black")};
+  border: 2px solid ${props => (props.darkMode ? "white" : "black")};
   font-size: 14px;
   font-weight: 400;
   text-decoration: none;
@@ -68,8 +31,9 @@ const StyledContainer = styled.div`
   padding: 0.25rem ${rhythm(1)};
 
   &:hover {
-    background-color: ${({ theme }) => theme.headerNav};
-    color: ${({ theme }) => theme.oppText};
+    background-color: ${props => (props.darkMode ? "white" : "black")};
+    color: ${props =>
+      props.darkMode ? "rgb(55, 53, 47)" : "rgba(255, 255, 255, 0.9)"};
   }
 
   @media all and (max-width: 500px) {
@@ -106,7 +70,48 @@ const StyledRightContainer = styled(StyledContainer)`
 const Breaker = styled.div`
   height: inherit;
   width: 2px;
-  background: ${({ theme }) => theme.headerNav};
+  background: ${props => (props.darkMode ? "white" : "black")};
 `
 
-export default Nav
+const Nav = props => {
+  const darkMode = props.isDarkMode
+  let homeFocused = false
+  let projectsFocused = false
+  let aboutFocused = false
+
+  if (props.focused === "home") {
+    homeFocused = true
+  } else if (props.focused === "projects") {
+    projectsFocused = true
+  } else if (props.focused === "about") {
+    aboutFocused = true
+  }
+
+  return (
+    <StyledNav>
+      <Link to="/">
+        <StyledLeftContainer focused={homeFocused} darkMode={darkMode}>
+          Home
+        </StyledLeftContainer>
+      </Link>
+      <Breaker darkMode={darkMode} />
+      <Link to="/projects/">
+        <StyledMiddleContainer focused={projectsFocused} darkMode={darkMode}>
+          Projects
+        </StyledMiddleContainer>
+      </Link>
+      <Breaker darkMode={darkMode} />
+      <Link to="/about/">
+        <StyledRightContainer focused={aboutFocused} darkMode={darkMode}>
+          About
+        </StyledRightContainer>
+      </Link>
+    </StyledNav>
+  )
+}
+
+const mapStateToProps = state => ({
+  isDarkMode: state.theme.isDarkMode,
+})
+
+export default connect(mapStateToProps)(Nav)
