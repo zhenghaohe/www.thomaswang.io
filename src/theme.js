@@ -31,7 +31,7 @@ export const darkTheme = {
   headings: "rgb(255, 255, 255)",
   text: "rgba(255, 255, 255, 0.9)",
   labels: "rgba(255, 255, 255, 0.6)",
-  titleLabel: "rgba(255, 255, 255, 0.6)",
+  titleLabel: "rgba(255, 255, 255, 0.8)",
   codeHighlight: "rgba(135,131,120,0.15)",
 
   buttonBackground: "#26bcfb",

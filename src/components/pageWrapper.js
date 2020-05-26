@@ -26,7 +26,8 @@ const TheH2 = styled.h2`
 const StyledH2Link = styled(Link)`
   box-shadow: none;
   text-decoration: none;
-  color: ${({ theme }) => theme.titleLabel};
+  color: ${props =>
+    props.darkMode ? "rgba(255, 255, 255, 0.8)" : "rgb(55, 53, 47)"};
   transition: none;
 
   &:hover {
@@ -52,7 +53,7 @@ const PageWrapper = props => {
 
   const darkMode = props.isDarkMode
   const fillColor = darkMode ? "rgb(255, 255, 255)" : "rgb(4, 4, 2)"
-  const labelColor = darkMode ? "rgba(255, 255, 255, 0.6)" : "rgb(55, 53, 47)"
+  const labelColor = darkMode ? "rgba(255, 255, 255, 0.8)" : "rgb(55, 53, 47)"
 
   if (location.pathname === blogPath) {
     header = (
@@ -84,7 +85,7 @@ const PageWrapper = props => {
   } else if (location.pathname.includes("blog")) {
     header = (
       <TheH2 title="cool blog">
-        <StyledH2Link to={`/blog/`}>
+        <StyledH2Link darkMode={darkMode} to={`/blog/`}>
           c
           <Sunglasses2 aria-label="sunglasses" viewBox="0 0 298 298" width="35">
             <path
