@@ -17,6 +17,7 @@ const ButtonWrapper = styled.button`
   text-decoration: none;
   padding: 10px 40px;
   cursor: pointer;
+  line-height: 1.82;
 
   background-color: ${props => props.props.background || "black"};
   color: ${props => props.props.color || "rgb(255, 255, 255)"};

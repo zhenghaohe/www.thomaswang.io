@@ -15,7 +15,7 @@ const Projects = props => {
         url="https://www.thomaswang.io/projects/"
       />
       <Nav focused="projects" />
-      <p style={{ margin: "5rem auto", textAlign: "center" }}>projects tbd.</p>
+      <p style={{ margin: "15rem auto", textAlign: "center" }}>tbd.</p>
     </PageWrapper>
   )
 }

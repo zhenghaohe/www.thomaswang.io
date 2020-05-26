@@ -11,7 +11,7 @@ const Subscribe = props => {
   const inputBackgroundFocus = lightTheme ? "#fff" : "#000"
   const inputPlaceholder = darkTheme && "rgba(255, 255, 255, 0.6)"
   const inputText = darkTheme && "white"
-  const button = darkTheme && "#26bcfb"
+  const button = "#26bcfb"
 
   const outerCardStyle = `
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

@@ -12,8 +12,8 @@ const About = props => {
     <PageWrapper location={props.location} title={siteTitle}>
       <SEO title="About / Thomas Wang" url="https://www.thomaswang.io/about/" />
       <Nav focused="about" />
-      <p style={{ margin: "5rem auto", textAlign: "center" }}>
-        about page under construction.
+      <p style={{ margin: "15rem auto", textAlign: "center" }}>
+        under construction.
       </p>
     </PageWrapper>
   )
