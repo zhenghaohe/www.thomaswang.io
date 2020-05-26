@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 
 :root {
   --bg-color: "#fffefc";
@@ -59,6 +60,11 @@ h6:hover .anchor {
 }
 .anchor:focus {
   opacity: 1;
+}
+
+.center {
+  display: grid;
+  place-items: center;
 }
 
 @media all and (max-width: 650px) {

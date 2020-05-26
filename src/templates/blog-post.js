@@ -191,7 +191,7 @@ const BlogPostTemplate = props => {
         url={shareUrl}
         imageUrl={blogMarkdown.metaImageUrl && blogMarkdown.metaImageUrl}
       />
-      <h1>{blogMarkdown.title}</h1>
+      <h1 style={{ marginTop: rhythm(-1 / 20) }}>{blogMarkdown.title}</h1>
       <div
         style={{
           ...scale(-1 / 8),
@@ -232,8 +232,18 @@ const BlogPostTemplate = props => {
             By {props.data.site.siteMetadata.author}
           </span>
         </div>
-        <div>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <div
+            style={{
+              fontFamily: `'Allura', cursive`,
+              fontSize: "1.25rem",
+              marginRight: "1rem",
+            }}
+          >
+            share
+          </div>
           <TwitterShareButton
+            className="center"
             url={shareUrl}
             title={blogMarkdown.title}
             via="ThomasWang"
@@ -246,9 +256,9 @@ const BlogPostTemplate = props => {
             />
           </TwitterShareButton>
           <FacebookShareButton
+            className="hide-on-mobile center"
             url={shareUrl}
             quote=""
-            className="hide-on-mobile"
           >
             <StyledFBIcon
               bgStyle={{ fill: "transparent" }}
@@ -258,11 +268,11 @@ const BlogPostTemplate = props => {
             />
           </FacebookShareButton>
           <LinkedinShareButton
+            className="hide-on-mobile center"
             url={shareUrl}
             title={blogMarkdown.title}
             summary={blogMarkdown.description || post.excerpt}
             source="ThomasWang.io"
-            className="hide-on-mobile"
           >
             <StyledLIIcon
               bgStyle={{ fill: "transparent" }}
@@ -272,6 +282,7 @@ const BlogPostTemplate = props => {
             />
           </LinkedinShareButton>
           <EmailShareButton
+            className=" center"
             url={shareUrl}
             subject={`ThomasWang.io - ${blogMarkdown.title}`}
             body={`From Thomas Wang's Blog: ${blogMarkdown.description ||

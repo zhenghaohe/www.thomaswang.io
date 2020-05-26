@@ -70,7 +70,7 @@ const PageWrapper = props => {
           marginLeft: `auto`,
           marginRight: `auto`,
           maxWidth: props.maxWidth || rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `2.75rem 1rem`,
           paddingBottom: 0,
         }}
       >
