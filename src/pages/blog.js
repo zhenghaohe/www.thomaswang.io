@@ -46,10 +46,10 @@ const CardPosts = props => {
                 <span style={{ fontStyle: "italic" }}>
                   {node.frontmatter.date}
                 </span>
-                <span>&nbsp; • &nbsp;</span>
-                <span className="hide-on-mobile">{timeToRead}</span>
-                <span className="show-on-mobile">{emojiToRead}</span>
                 <div style={{ marginTop: "0.25rem" }} className="systemfont">
+                  <span className="hide-on-mobile">{timeToRead}</span>
+                  <span className="show-on-mobile">{emojiToRead}</span>
+                  <span>&nbsp; · &nbsp;</span>
                   <ViewCounter2 id={node.fields.slug} />
                 </div>
               </small>
