@@ -213,9 +213,9 @@ const BlogPostTemplate = props => {
               style={{
                 marginRight: rhythm(1 / 3),
                 marginBottom: 0,
-                width: 25,
-                height: 25,
-                minWidth: 25,
+                width: 30,
+                height: 30,
+                minWidth: 30,
                 borderRadius: `100%`,
               }}
               imgStyle={{

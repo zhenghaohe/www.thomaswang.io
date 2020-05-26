@@ -143,7 +143,7 @@ const Bio = props => {
                 href={`https://twitter.com/${social.twitter}`}
                 alt="twitter"
                 aria-label="twitter link"
-                style={{ marginLeft: "1px" }}
+                style={{ margin: "0 3px" }}
               >
                 <TwitterIcon logoColor={logoColor} />
               </Social>
@@ -151,7 +151,6 @@ const Bio = props => {
                 href={`https://instagram.com/${social.instagram}`}
                 alt="instagram"
                 aria-label="instagram link"
-                style={{ marginRight: "3px" }}
               >
                 <InstagramIcon logoColor={logoColor} />
               </Social>
@@ -166,7 +165,6 @@ const Bio = props => {
                 href={`https://github.com/${social.github}`}
                 alt="github"
                 aria-label="github link"
-                style={{ marginLeft: "3px", marginRight: "3px" }}
               >
                 <GithubIcon logoColor={logoColor} />
               </Social>
@@ -174,10 +172,10 @@ const Bio = props => {
                 href={`https://codepen.io/${social.codepen}`}
                 alt="codepen"
                 aria-label="codepen link"
-                style={{ marginRight: "4px" }}
               >
                 <CodepenIcon logoColor={logoColor} />
               </Social>
+              <span>&nbsp; · &nbsp;</span>
               <RSSLink
                 href="https://www.thomaswang.io/feed.xml"
                 logoColor={logoColor}
@@ -239,7 +237,7 @@ export const AvatarLink = styled(Link)`
 const Social = styled.a`
   vertical-align: middle;
   display: inline-block;
-  margin: auto 2px;
+  margin: auto 4px;
   text-decoration: none;
   box-shadow: none;
   color: #ffffff;

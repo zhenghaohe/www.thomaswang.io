@@ -37,8 +37,14 @@ const CardPosts = props => {
               >
                 {title}
               </h3>
-              <small>
-                <span>{node.frontmatter.date}</span>
+              <small
+                style={{
+                  fontFamily: `"Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+                }}
+              >
+                <span style={{ fontStyle: "italic" }}>
+                  {node.frontmatter.date}
+                </span>
                 <span>&nbsp; • &nbsp;</span>
                 <span>{timeToRead}</span>
               </small>
