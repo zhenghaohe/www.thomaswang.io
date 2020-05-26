@@ -181,13 +181,14 @@ const BlogPostTemplate = props => {
   const { previous, next, slug } = props.pageContext
   const timeToRead = formatReadingTime(post.timeToRead)
   const isDarkMode = props.isDarkMode
+  const shareUrl = `https://www.thomaswang.io/blog${slug}`
 
   return (
     <PageWrapper location={props.location} title={siteTitle}>
       <SEO
         title={blogMarkdown.title}
         description={blogMarkdown.description || post.excerpt}
-        url={`https://www.thomaswang.io/blog${slug}`}
+        url={shareUrl}
         imageUrl={blogMarkdown.metaImageUrl && blogMarkdown.metaImageUrl}
       />
       <h1>{blogMarkdown.title}</h1>
@@ -232,7 +233,11 @@ const BlogPostTemplate = props => {
           </span>
         </div>
         <div>
-          <TwitterShareButton title={blogMarkdown.title} via="ThomasWang">
+          <TwitterShareButton
+            url={shareUrl}
+            title={blogMarkdown.title}
+            via="ThomasWang"
+          >
             <StyledTwitterIcon
               bgStyle={{ fill: "transparent" }}
               iconFillColor="black"
@@ -240,7 +245,11 @@ const BlogPostTemplate = props => {
               round={true}
             />
           </TwitterShareButton>
-          <FacebookShareButton quote="" className="hide-on-mobile">
+          <FacebookShareButton
+            url={shareUrl}
+            quote=""
+            className="hide-on-mobile"
+          >
             <StyledFBIcon
               bgStyle={{ fill: "transparent" }}
               iconFillColor="black"
@@ -249,6 +258,7 @@ const BlogPostTemplate = props => {
             />
           </FacebookShareButton>
           <LinkedinShareButton
+            url={shareUrl}
             title={blogMarkdown.title}
             summary={blogMarkdown.description || post.excerpt}
             source="ThomasWang.io"
@@ -262,7 +272,8 @@ const BlogPostTemplate = props => {
             />
           </LinkedinShareButton>
           <EmailShareButton
-            subject={`ThomasWang.io: ${blogMarkdown.title}`}
+            url={shareUrl}
+            subject={`ThomasWang.io - ${blogMarkdown.title}`}
             body={`From Thomas Wang's Blog: ${blogMarkdown.description ||
               post.excerpt}`}
           >
@@ -284,8 +295,8 @@ const BlogPostTemplate = props => {
           marginBottom: rhythm(1 / 1.25),
         }}
       >
-        <span>{blogMarkdown.date}</span>
-        <span>&nbsp; • &nbsp;</span>
+        <span style={{ fontStyle: "italic" }}>{blogMarkdown.date}</span>
+        <span>&nbsp; · &nbsp;</span>
         <span>{timeToRead}</span>
       </p>
       <MDXRenderer>{post.body}</MDXRenderer>
