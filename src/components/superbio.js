@@ -128,7 +128,7 @@ const SuperBio = props => {
                 }}
               />
             </AvatarLink>
-            <p>
+            <p className="systemfont">
               By <strong>{author}</strong>, who occasionally has useful things
               to share.
               <br />

@@ -14,6 +14,7 @@ const Back = styled.p`
 `
 
 const TheH2 = styled.h2`
+  font-family: "Pacifico", cursive;
   margin: 0 auto 3rem;
   text-align: center;
 
@@ -66,6 +67,7 @@ const PageWrapper = props => {
             marginBottom: rhythm(1.5),
             marginTop: 0,
             textAlign: "center",
+            fontFamily: `'Pacifico', cursive`,
           }}
         >
           c
@@ -81,7 +83,7 @@ const PageWrapper = props => {
     )
   } else if (location.pathname.includes("blog")) {
     header = (
-      <TheH2>
+      <TheH2 title="cool blog">
         <StyledH2Link to={`/blog/`}>
           c
           <Sunglasses2 aria-label="sunglasses" viewBox="0 0 298 298" width="35">

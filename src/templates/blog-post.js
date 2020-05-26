@@ -15,7 +15,7 @@ import {
   TwitterIcon,
 } from "react-share"
 
-import Bio from "../components/bio"
+// import Bio from "../components/bio"
 import PageWrapper from "../components/pageWrapper"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -311,7 +311,6 @@ const BlogPostTemplate = props => {
       <div
         style={{
           ...scale(-1 / 5),
-          fontFamily: `"Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
           display: `flex`,
           alignItems: `center`,
           justifyContent: `space-between`,
@@ -324,7 +323,7 @@ const BlogPostTemplate = props => {
           <span className="hide-on-mobile">{timeToRead}</span>
           <span className="show-on-mobile">{emojiToRead}</span>
         </div>
-        <div>
+        <div className="systemfont">
           <ViewCounter id={slug} />
         </div>
       </div>
@@ -352,7 +351,7 @@ const BlogPostTemplate = props => {
           marginBottom: rhythm(1.5),
         }}
       />
-      <Bio />
+      {/* <Bio /> */}
       <StyledList>
         <StyledListItem>
           {previous && (

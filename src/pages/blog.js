@@ -42,18 +42,14 @@ const CardPosts = props => {
               >
                 {title}
               </h3>
-              <small
-                style={{
-                  fontFamily: `"Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
-                }}
-              >
+              <small>
                 <span style={{ fontStyle: "italic" }}>
                   {node.frontmatter.date}
                 </span>
                 <span>&nbsp; • &nbsp;</span>
                 <span className="hide-on-mobile">{timeToRead}</span>
                 <span className="show-on-mobile">{emojiToRead}</span>
-                <div style={{ marginTop: "0.25rem" }}>
+                <div style={{ marginTop: "0.25rem" }} className="systemfont">
                   <ViewCounter2 id={node.fields.slug} />
                 </div>
               </small>
