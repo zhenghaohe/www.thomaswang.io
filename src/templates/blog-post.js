@@ -1,8 +1,19 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import styled from "styled-components"
 import { connect } from "react-redux"
+import {
+  EmailShareButton,
+  EmailIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  LinkedinShareButton,
+  LinkedinIcon,
+  TwitterShareButton,
+  TwitterIcon,
+} from "react-share"
 
 import Bio from "../components/bio"
 import PageWrapper from "../components/pageWrapper"
@@ -10,6 +21,54 @@ import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 import Subscribe from "../components/subscribe"
 import Comments from "../components/comments"
+import { AvatarLink } from "../components/bio"
+
+const StyledEmailIcon = styled(EmailIcon)`
+  border: 1px #eee solid;
+  border-radius: 50%;
+  background: #eee;
+
+  &:hover {
+    background: #fff;
+    border: 1px #ccc solid;
+  }
+`
+
+const StyledTwitterIcon = styled(TwitterIcon)`
+  margin-right: 0.75rem;
+  border: 1px #eee solid;
+  border-radius: 50%;
+  background: #eee;
+
+  &:hover {
+    background: #fff;
+    border: 1px #ccc solid;
+  }
+`
+
+const StyledFBIcon = styled(FacebookIcon)`
+  margin-right: 0.75rem;
+  border: 1px #eee solid;
+  border-radius: 50%;
+  background: #eee;
+
+  &:hover {
+    background: #fff;
+    border: 1px #ccc solid;
+  }
+`
+
+const StyledLIIcon = styled(LinkedinIcon)`
+  margin-right: 0.75rem;
+  border: 1px #eee solid;
+  border-radius: 50%;
+  background: #eee;
+
+  &:hover {
+    background: #fff;
+    border: 1px #ccc solid;
+  }
+`
 
 const StyledList = styled.ul`
   position: relative;
@@ -111,7 +170,7 @@ export function formatReadingTime(minutes) {
       .fill("🍿")
       .join("")} ${minutes} min read`
   } else {
-    return `${new Array(cups || 1).fill("🥤").join("")} ${minutes} min read`
+    return `${minutes} minute read ${new Array(cups || 1).fill("🥤").join("")}`
   }
 }
 
@@ -132,12 +191,97 @@ const BlogPostTemplate = props => {
         imageUrl={blogMarkdown.metaImageUrl && blogMarkdown.metaImageUrl}
       />
       <h1>{blogMarkdown.title}</h1>
+      <div
+        style={{
+          ...scale(-1 / 8),
+          display: `flex`,
+          alignItems: `center`,
+          justifyContent: `space-between`,
+          marginBottom: rhythm(1 / 2),
+          marginTop: rhythm(-1 / 2),
+        }}
+      >
+        <div style={{ display: `flex`, alignItems: `center` }}>
+          <AvatarLink
+            to="/blog/"
+            style={{ display: "grid", placeItems: "center" }}
+          >
+            <Image
+              fixed={props.data.avatar.childImageSharp.fixed}
+              alt={props.data.site.siteMetadata.author}
+              style={{
+                marginRight: rhythm(1 / 3),
+                marginBottom: 0,
+                width: 25,
+                height: 25,
+                minWidth: 25,
+                borderRadius: `100%`,
+              }}
+              imgStyle={{
+                borderRadius: `50%`,
+              }}
+            />
+          </AvatarLink>
+          <span
+            style={{
+              fontFamily: `"Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+              fontWeight: "600",
+            }}
+          >
+            By {props.data.site.siteMetadata.author}
+          </span>
+        </div>
+        <div>
+          <TwitterShareButton title={blogMarkdown.title} via="ThomasWang">
+            <StyledTwitterIcon
+              bgStyle={{ fill: "transparent" }}
+              iconFillColor="black"
+              size="27"
+              round={true}
+            />
+          </TwitterShareButton>
+          <FacebookShareButton quote="" className="hide-on-mobile">
+            <StyledFBIcon
+              bgStyle={{ fill: "transparent" }}
+              iconFillColor="black"
+              size="27"
+              round={true}
+            />
+          </FacebookShareButton>
+          <LinkedinShareButton
+            title={blogMarkdown.title}
+            summary={blogMarkdown.description || post.excerpt}
+            source="ThomasWang.io"
+            className="hide-on-mobile"
+          >
+            <StyledLIIcon
+              bgStyle={{ fill: "transparent" }}
+              iconFillColor="black"
+              size="27"
+              round={true}
+            />
+          </LinkedinShareButton>
+          <EmailShareButton
+            subject={`ThomasWang.io: ${blogMarkdown.title}`}
+            body={`From Thomas Wang's Blog: ${blogMarkdown.description ||
+              post.excerpt}`}
+          >
+            <StyledEmailIcon
+              bgStyle={{ fill: "transparent" }}
+              iconFillColor="black"
+              size="27"
+              round={true}
+            />
+          </EmailShareButton>
+        </div>
+      </div>
       <p
         style={{
           ...scale(-1 / 5),
-          display: `block`,
-          marginBottom: rhythm(1),
-          marginTop: rhythm(-1),
+          fontFamily: `"Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
+          display: `flex`,
+          alignItems: `center`,
+          marginBottom: rhythm(1 / 1.25),
         }}
       >
         <span>{blogMarkdown.date}</span>
@@ -146,7 +290,14 @@ const BlogPostTemplate = props => {
       </p>
       <MDXRenderer>{post.body}</MDXRenderer>
       <Comments />
-      <div style={{ textAlign: "center", margin: "2rem 0" }}>
+      <div
+        style={{
+          ...scale(-1 / 5),
+          textAlign: "center",
+          margin: "2rem 0",
+          fontStyle: "italic",
+        }}
+      >
         To propose a change to this post,{" "}
         <a
           href={`https://github.com/thomaswang/www.thomaswang.io/edit/master/content/blog/${slug}index.mdx`}
@@ -252,6 +403,13 @@ export default connect(mapStateToProps)(BlogPostTemplate)
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
+    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
+          ...GatsbyImageSharpFixed_tracedSVG
+        }
+      }
+    }
     site {
       siteMetadata {
         title

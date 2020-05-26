@@ -226,7 +226,7 @@ const Container = styled.div`
   display: flex;
 `
 
-const AvatarLink = styled(Link)`
+export const AvatarLink = styled(Link)`
   text-decoration: none;
   box-shadow: none;
   color: #ffffff;
