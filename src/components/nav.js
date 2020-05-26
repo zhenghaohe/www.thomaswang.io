@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Link } from "gatsby"
 import { connect } from "react-redux"
 
@@ -32,9 +32,9 @@ const StyledContainer = styled.div`
 
   ${props =>
     props.darkMode &&
-    `
-    opacity: 0.87;
-  `}
+    css`
+      opacity: 0.87;
+    `}
 
   &:hover {
     background-color: ${props => (props.darkMode ? "white" : "black")};

@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 const Button = props => (
   <ButtonWrapper props={props} onClick={props.onClick}>
@@ -27,24 +27,24 @@ const ButtonWrapper = styled.button`
 
   ${props =>
     props.props.center &&
-    `
-    margin: auto;
-  `}
+    css`
+      margin: auto;
+    `}
 
   ${props =>
     props.props.special &&
-    `
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTg3IiBoZWlnaHQ9IjU0IiB2aWV3Qm94PSIwIDAgMTg3IDU0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBmaWx0ZXI9InVybCgjZmlsdGVyMF9mKSI+CjxyZWN0IHg9IjMiIHk9IjMiIHdpZHRoPSIxODEiIGhlaWdodD0iNDgiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMTQiLz4KPC9nPgo8cmVjdCB4PSIxMjkiIHk9IjE2IiB3aWR0aD0iMjMiIGhlaWdodD0iNiIgcng9IjMiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMyIvPgo8cmVjdCB4PSIxNTYiIHk9IjE2IiB3aWR0aD0iOCIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4zOSIvPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9mIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTg3IiBoZWlnaHQ9IjU0IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjEuNSIgcmVzdWx0PSJlZmZlY3QxX2ZvcmVncm91bmRCbHVyIi8+CjwvZmlsdGVyPgo8L2RlZnM+Cjwvc3ZnPgo=);
-    background-size: cover;
-    background-position-y: -10px;
-    background-position-x: -57px;
-    outline: none;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
-    background-repeat: no-repeat;
-    transition: all 0.1s ease 0s;
+    css`
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTg3IiBoZWlnaHQ9IjU0IiB2aWV3Qm94PSIwIDAgMTg3IDU0IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8ZyBmaWx0ZXI9InVybCgjZmlsdGVyMF9mKSI+CjxyZWN0IHg9IjMiIHk9IjMiIHdpZHRoPSIxODEiIGhlaWdodD0iNDgiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMTQiLz4KPC9nPgo8cmVjdCB4PSIxMjkiIHk9IjE2IiB3aWR0aD0iMjMiIGhlaWdodD0iNiIgcng9IjMiIGZpbGw9IndoaXRlIiBmaWxsLW9wYWNpdHk9IjAuMyIvPgo8cmVjdCB4PSIxNTYiIHk9IjE2IiB3aWR0aD0iOCIgaGVpZ2h0PSI2IiByeD0iMyIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4zOSIvPgo8ZGVmcz4KPGZpbHRlciBpZD0iZmlsdGVyMF9mIiB4PSIwIiB5PSIwIiB3aWR0aD0iMTg3IiBoZWlnaHQ9IjU0IiBmaWx0ZXJVbml0cz0idXNlclNwYWNlT25Vc2UiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiI+CjxmZUZsb29kIGZsb29kLW9wYWNpdHk9IjAiIHJlc3VsdD0iQmFja2dyb3VuZEltYWdlRml4Ii8+CjxmZUJsZW5kIG1vZGU9Im5vcm1hbCIgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiByZXN1bHQ9InNoYXBlIi8+CjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjEuNSIgcmVzdWx0PSJlZmZlY3QxX2ZvcmVncm91bmRCbHVyIi8+CjwvZmlsdGVyPgo8L2RlZnM+Cjwvc3ZnPgo=);
+      background-size: cover;
+      background-position-y: -10px;
+      background-position-x: -57px;
+      outline: none;
+      border-width: initial;
+      border-style: none;
+      border-color: initial;
+      border-image: initial;
+      background-repeat: no-repeat;
+      transition: all 0.1s ease 0s;
     `}
 
   margin-top: ${props => props.props.marginTop};
