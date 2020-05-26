@@ -1,8 +1,8 @@
 {
   "name": "www.thomaswang.io",
   "private": true,
-  "description": "A personal Gatsby site and blog powered by Netlify CMS",
-  "version": "1.1.0",
+  "description": "A personal website and blog powered by Gatsby",
+  "version": "2.0",
   "author": "Thomas Wang <thomas@wang.sh>",
   "dependencies": {
     "@mdx-js/mdx": "^1.5.1",
