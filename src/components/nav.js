@@ -30,6 +30,12 @@ const StyledContainer = styled.div`
   text-align: center;
   padding: 0.25rem ${rhythm(1)};
 
+  ${props =>
+    props.darkMode &&
+    `
+    opacity: 0.87;
+  `}
+
   &:hover {
     background-color: ${props => (props.darkMode ? "white" : "black")};
     color: ${props =>

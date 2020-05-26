@@ -19,7 +19,7 @@ function setColorTheme() {
 
   if (prefersDarkMode) {
     let root = document.documentElement
-    root.style.setProperty("--bg-color", "#232629")
+    root.style.setProperty("--bg-color", "#16191f")
   }
 }
 

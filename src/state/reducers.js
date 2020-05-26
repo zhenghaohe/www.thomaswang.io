@@ -18,7 +18,7 @@ const theme = (state = initialState, action) => {
           root.style.setProperty("--bg-color", "#fffefc")
         } else {
           window.localStorage.setItem("isDarkMode", "true")
-          root.style.setProperty("--bg-color", "#232629")
+          root.style.setProperty("--bg-color", "#16191f")
         }
       }
 
@@ -31,7 +31,7 @@ const theme = (state = initialState, action) => {
         window.localStorage.setItem("isDarkMode", "true")
 
         let root = document.documentElement
-        root.style.setProperty("--bg-color", "#232629")
+        root.style.setProperty("--bg-color", "#16191f")
       }
 
       return {
