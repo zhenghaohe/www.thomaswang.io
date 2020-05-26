@@ -9,8 +9,12 @@ import PageWrapper from "../components/pageWrapper"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import Subscribe from "../components/subscribe"
-import { formatReadingTime } from "../templates/blog-post"
+import {
+  formatReadingTime,
+  formatReadingTimeEmoji,
+} from "../templates/blog-post"
 import { lightTheme, darkTheme } from "../theme"
+import { ViewCounter2 } from "../components/ViewCounter"
 
 const CardPosts = props => {
   const { posts, isDarkMode, theme } = props
@@ -21,6 +25,7 @@ const CardPosts = props => {
       {posts.map(({ node }, index) => {
         const title = node.frontmatter.title || node.fields.slug
         const timeToRead = formatReadingTime(node.timeToRead)
+        const emojiToRead = formatReadingTimeEmoji(node.timeToRead)
 
         if (index < 5 || show) {
           return (
@@ -46,7 +51,11 @@ const CardPosts = props => {
                   {node.frontmatter.date}
                 </span>
                 <span>&nbsp; • &nbsp;</span>
-                <span>{timeToRead}</span>
+                <span className="hide-on-mobile">{timeToRead}</span>
+                <span className="show-on-mobile">{emojiToRead}</span>
+                <div style={{ marginTop: "0.25rem" }}>
+                  <ViewCounter2 id={node.fields.slug} />
+                </div>
               </small>
               <p
                 style={{

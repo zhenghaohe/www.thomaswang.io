@@ -67,8 +67,16 @@ h6:hover .anchor {
   place-items: center;
 }
 
+.show-on-mobile {
+  display: none;
+}
+
 @media all and (max-width: 650px) {
   .hide-on-mobile {
     display: none;
+  }
+
+  .show-on-mobile {
+    display: inline-block;
   }
 }

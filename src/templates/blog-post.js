@@ -167,11 +167,20 @@ const StyledNext = styled(Link)`
 export function formatReadingTime(minutes) {
   let cups = Math.round(minutes / 5)
   if (cups > 5) {
-    return `${new Array(Math.round(cups / Math.E))
+    return `${minutes} minute read ${new Array(Math.round(cups / Math.E))
       .fill("🍿")
-      .join("")} ${minutes} min read`
+      .join("")}`
   } else {
     return `${minutes} minute read ${new Array(cups || 1).fill("🥤").join("")}`
+  }
+}
+
+export function formatReadingTimeEmoji(minutes) {
+  let cups = Math.round(minutes / 5)
+  if (cups > 5) {
+    return `${new Array(Math.round(cups / Math.E)).fill("🍿").join("")}`
+  } else {
+    return `${new Array(cups || 1).fill("🥤").join("")}`
   }
 }
 
@@ -181,6 +190,7 @@ const BlogPostTemplate = props => {
   const siteTitle = props.data.site.siteMetadata.title
   const { previous, next, slug } = props.pageContext
   const timeToRead = formatReadingTime(post.timeToRead)
+  const emojiToRead = formatReadingTimeEmoji(post.timeToRead)
   const isDarkMode = props.isDarkMode
   const shareUrl = `https://www.thomaswang.io/blog${slug}`
 
@@ -310,8 +320,9 @@ const BlogPostTemplate = props => {
       >
         <div>
           <span style={{ fontStyle: "italic" }}>{blogMarkdown.date}</span>
-          <span className="hide-on-mobile">&nbsp; · &nbsp;</span>
+          <span>&nbsp; · &nbsp;</span>
           <span className="hide-on-mobile">{timeToRead}</span>
+          <span className="show-on-mobile">{emojiToRead}</span>
         </div>
         <div>
           <ViewCounter id={slug} />
