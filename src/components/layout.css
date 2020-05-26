@@ -12,12 +12,6 @@ body {
   background-color: var(--bg-color) !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  body {
-    color: white;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
