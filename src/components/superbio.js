@@ -118,9 +118,9 @@ const SuperBio = props => {
                 style={{
                   marginRight: rhythm(1 / 2),
                   marginBottom: 0,
-                  width: 90,
-                  height: 90,
-                  minWidth: 90,
+                  width: 100,
+                  height: 100,
+                  minWidth: 100,
                   borderRadius: `100%`,
                 }}
                 imgStyle={{
@@ -195,7 +195,7 @@ const bioQuery = graphql`
   query SuperBioQuery {
     avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
       childImageSharp {
-        fixed(width: 50, height: 50) {
+        fixed(width: 100, height: 100) {
           ...GatsbyImageSharpFixed_tracedSVG
         }
       }
