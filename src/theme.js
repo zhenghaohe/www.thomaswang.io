@@ -19,6 +19,9 @@ export const lightTheme = {
 
   livePreviewBackground: "white",
   navBorder: "#e1e4e8",
+
+  headerNav: "black",
+  oppText: "rgba(255, 255, 255, 0.9)",
 }
 
 export const darkTheme = {
@@ -41,6 +44,9 @@ export const darkTheme = {
 
   livePreviewBackground: "rgb(1, 22, 39)",
   navBorder: "grey",
+
+  headerNav: "white",
+  oppText: "rgb(55, 53, 47)",
 }
 
 export const theme = isDarkMode => {

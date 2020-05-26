@@ -7,6 +7,7 @@ import PageWrapper from "../components/pageWrapper"
 import SEO from "../components/seo"
 import Button from "../components/button"
 import { rhythm, scale } from "../utils/typography"
+import Nav from "../components/nav"
 
 const capitalizeFirstLetter = string => {
   if (string) {
@@ -156,6 +157,8 @@ const IndexPage = props => {
     >
       <SEO title="Home / Thomas Wang" url="https://www.thomaswang.io/" />
 
+      <Nav focused="home" />
+
       <IconContainer>
         <Interactive>
           <Waver>
@@ -200,9 +203,10 @@ const IndexPage = props => {
 
       <Link to="/blog/">
         <Button
-          marginTop="4rem"
-          marginBottom="4rem"
-          background={darkMode && "#26bcfb"}
+          special
+          marginTop="6rem"
+          marginBottom="6rem"
+          background="#26bcfb"
           center
         >
           Blog
@@ -239,7 +243,7 @@ const IconContainer = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin: 1rem 0;
+  margin: 2.25rem 0;
 `
 
 const wave = keyframes`
