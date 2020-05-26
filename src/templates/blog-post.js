@@ -22,6 +22,7 @@ import { rhythm, scale } from "../utils/typography"
 import Subscribe from "../components/subscribe"
 import Comments from "../components/comments"
 import { AvatarLink } from "../components/bio"
+import ViewCounter from "../components/ViewCounter"
 
 const StyledEmailIcon = styled(EmailIcon)`
   border: 1px #eee solid;
@@ -297,19 +298,25 @@ const BlogPostTemplate = props => {
           </EmailShareButton>
         </div>
       </div>
-      <p
+      <div
         style={{
           ...scale(-1 / 5),
           fontFamily: `"Ubuntu", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif`,
           display: `flex`,
           alignItems: `center`,
+          justifyContent: `space-between`,
           marginBottom: rhythm(1 / 1.25),
         }}
       >
-        <span style={{ fontStyle: "italic" }}>{blogMarkdown.date}</span>
-        <span>&nbsp; · &nbsp;</span>
-        <span>{timeToRead}</span>
-      </p>
+        <div>
+          <span style={{ fontStyle: "italic" }}>{blogMarkdown.date}</span>
+          <span className="hide-on-mobile">&nbsp; · &nbsp;</span>
+          <span className="hide-on-mobile">{timeToRead}</span>
+        </div>
+        <div>
+          <ViewCounter id={slug} />
+        </div>
+      </div>
       <MDXRenderer>{post.body}</MDXRenderer>
       <Comments />
       <div
