@@ -95,7 +95,7 @@ const Blog = props => {
 
   return (
     <PageWrapper location={location} title={siteTitle}>
-      <SEO title="Blog" url="https://www.thomaswang.io/blog/" />
+      <SEO title="Blog / Thomas Wang" url="https://www.thomaswang.io/blog/" />
       <Bio />
       <div style={{ margin: `20px 0 ${rhythm(2)}` }}>
         <CardPosts posts={posts} isDarkMode={isDarkMode} theme={theme} />

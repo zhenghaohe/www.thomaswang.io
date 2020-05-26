@@ -197,7 +197,7 @@ const BlogPostTemplate = props => {
   return (
     <PageWrapper location={props.location} title={siteTitle}>
       <SEO
-        title={blogMarkdown.title}
+        title={`${blogMarkdown.title} / Thomas Wang`}
         description={blogMarkdown.description || post.excerpt}
         url={shareUrl}
         imageUrl={blogMarkdown.metaImageUrl && blogMarkdown.metaImageUrl}

@@ -154,7 +154,7 @@ const IndexPage = props => {
       title={siteTitle}
       maxWidth={rhythm(28)}
     >
-      <SEO title="Home" url="https://www.thomaswang.io/" />
+      <SEO title="Home / Thomas Wang" url="https://www.thomaswang.io/" />
 
       <IconContainer>
         <Interactive>

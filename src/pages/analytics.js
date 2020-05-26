@@ -11,7 +11,10 @@ const StyledIframe = styled.iframe`
 
 export default () => (
   <>
-    <SEO title="Analytics" url="https://www.thomaswang.io/analytics/" />
+    <SEO
+      title="Analytics / Thomas Wang"
+      url="https://www.thomaswang.io/analytics/"
+    />
     <StyledIframe
       src="https://datastudio.google.com/embed/reporting/82290137-c6dc-4b66-84a6-fed5af31980e/page/KthH"
       frameborder="0"

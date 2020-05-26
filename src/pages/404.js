@@ -10,7 +10,7 @@ const NotFoundPage = props => {
 
   return (
     <PageWrapper location={location} title={siteTitle}>
-      <SEO title="404: Not Found" />
+      <SEO title="404: Not Found / Thomas Wang" />
       <h1>Not Found</h1>
       <p>
         <span role="img" aria-label="triple shrug" title="shrug">
