@@ -18,11 +18,12 @@ export default function HTML(props) {
             position: "absolute",
             right: "16px",
             top: "16px",
+            fontSize: "14px",
             fontWeight: "500",
             fontFamily: `system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif`,
           }}
         >
-          JavaScript is 🚫. This site 🏃‍♂️💨 better with it on.
+          JavaScript is disabled!
         </noscript>
         <div
           key={`body`}
