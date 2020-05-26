@@ -91,7 +91,7 @@ const Subscribe = props => {
     <section className="subscribe-section" style={props.style}>
       <SubscribeCard
         tinyletterUsername="thomaswang"
-        description="I'll send you my latest blog posts by email. Also, you'll be the first to hear about new things I'm working on‍!"
+        description="I'll send you my latest blog posts by email. Also, you'll be the first to hear about new things I'm working on!"
         outerCardStyle={outerCardStyle}
         innerCardStyle={innerCardStyle}
         titleStyle={titleStyle}
