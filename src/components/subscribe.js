@@ -7,7 +7,7 @@ const Subscribe = props => {
   const darkTheme = props.isDarkMode
   const background = lightTheme ? "#ffffff" : "#13161f"
   const border = lightTheme ? "#F5F5F5" : "#13161f"
-  const inputBackground = lightTheme ? "#f5f5f5" : "#494D50"
+  const inputBackground = lightTheme ? "#f5f5f5" : "#0e1013"
   const inputBackgroundFocus = lightTheme ? "#fff" : "#000"
   const inputPlaceholder = darkTheme && "rgba(255, 255, 255, 0.6)"
   const inputText = darkTheme && "white"
