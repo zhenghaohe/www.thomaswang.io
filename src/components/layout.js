@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import { connect } from "react-redux"
 import { ThemeProvider } from "styled-components"
 
@@ -8,18 +8,6 @@ import { prefersDarkMode } from "../utils/prefersDarkMode"
 import "./layout.css"
 
 const Layout = props => {
-  useEffect(() => {
-    const isDarkMode = prefersDarkMode()
-
-    if (isDarkMode) {
-      props.setDark()
-    }
-
-    if (typeof document !== "undefined") {
-      document.getElementById("___gatsby").style.opacity = 1
-    }
-  }, [props])
-
   const darkMode = prefersDarkMode()
   const userTheme = theme(darkMode || props.isDarkMode)
 

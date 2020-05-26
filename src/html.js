@@ -28,10 +28,6 @@ export default function HTML(props) {
           key={`body`}
           id="___gatsby"
           dangerouslySetInnerHTML={{ __html: props.body }}
-          style={{
-            opacity: 0,
-            transition: "0.8s cubic-bezier(0.2, 0.8, 0.2, 1)",
-          }}
         />
         {props.postBodyComponents}
       </body>
