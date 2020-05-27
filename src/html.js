@@ -56,7 +56,7 @@ export default function HTML(props) {
         <noscript
           id="gatsby-noscript"
           style={{
-            position: "absolute",
+            position: "fixed",
             right: "16px",
             bottom: "0",
             background: "black",

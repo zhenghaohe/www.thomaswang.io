@@ -162,7 +162,7 @@ const IndexPage = props => {
         <Interactive>
           <Waver>
             <span role="img" aria-label="wave emoji" title="Waving hand">
-              👋🏼
+              🖐🏼
             </span>
           </Waver>
         </Interactive>
@@ -262,13 +262,13 @@ const IconContainer = styled.div`
 `
 
 const wave = keyframes`
-    0% { transform: rotate(  0.0deg) }
-   10% { transform: rotate(-10.0deg) }
-   20% { transform: rotate( 12.0deg) }
-   30% { transform: rotate(-10.0deg) }
-   40% { transform: rotate(  9.0deg) }
-   50% { transform: rotate(  0.0deg) }
-  100% { transform: rotate(  0.0deg) }
+    0% { transform: rotate(-40.0deg) }
+   10% { transform: rotate(-50.0deg) }
+   20% { transform: rotate(-28.0deg) }
+   30% { transform: rotate(-50.0deg) }
+   40% { transform: rotate(-31.0deg) }
+   50% { transform: rotate(-40.0deg) }
+  100% { transform: rotate(-40.0deg) }
 `
 
 const Icon = styled.img`
@@ -276,23 +276,24 @@ const Icon = styled.img`
   margin-top: 32px;
   margin-right: 32px;
   margin-bottom: 0;
-  width: 40px;
+  width: 50px;
 `
 
 const Interactive = styled.div`
   position: relative;
-  top: 0.5rem;
-  left: -0.5rem;
+  top: 0.75rem;
+  left: 0;
 `
 
 const Waver = styled.span`
-  font-size: 24px;
+  font-size: 27px;
   animation-name: ${wave};
   animation-duration: 2.5s;
   animation-iteration-count: infinite;
   transform-origin: 70% 70%;
   display: inline-block;
   margin-top: 16px;
+  margin-left: 4px;
 `
 
 const Socials = styled.div`
