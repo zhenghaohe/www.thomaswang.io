@@ -69,7 +69,7 @@ export default function HTML(props) {
             fontFamily: `system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif`,
           }}
         >
-          JavaScript is disabled!
+          JavaScript is disabled
         </noscript>
         <div
           key={`body`}
