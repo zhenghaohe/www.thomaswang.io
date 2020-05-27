@@ -57,11 +57,13 @@ export default function HTML(props) {
           id="gatsby-noscript"
           style={{
             position: "fixed",
+            zIndex: 99,
             right: "16px",
             bottom: "0",
             background: "black",
             color: "white",
             padding: "4px 12px",
+            marginBottom: "12px",
             fontSize: "14px",
             fontWeight: "500",
             fontFamily: `system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif`,
