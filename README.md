@@ -2,7 +2,11 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f6d8b19d-7c68-4227-8cfe-e3af7818076e/deploy-status)](https://app.netlify.com/sites/thomaswang/deploys)
 
-## Adding blog posts
+## Stats
+
+[Firebase Cloud Functions](https://github.com/thomaswang/stats) used to enable [personal stats](https://www.thomaswang.io/about/):
+
+## Blog posts
 
 ### Regular Markdown posts (deprecated)
 
