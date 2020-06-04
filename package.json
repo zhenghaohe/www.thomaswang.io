@@ -41,6 +41,7 @@
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-live-playground": "^1.0.5",
+    "react-loading-skeleton": "^2.0.1",
     "react-redux": "^7.1.1",
     "react-share": "^4.1.0",
     "react-subscribe-card": "^2.1.2",

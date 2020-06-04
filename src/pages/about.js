@@ -1,7 +1,8 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
 import { connect } from "react-redux"
+import Skeleton from "react-loading-skeleton"
 
 import PageWrapper from "../components/pageWrapper"
 import SEO from "../components/seo"
@@ -36,6 +37,24 @@ const Landscape = styled.div`
   width: 100%;
   cursor: pointer;
 
+  span {
+    width: 100%;
+
+    &::after {
+      padding-top: 56.25%;
+      display: block;
+      content: "";
+    }
+
+    > span {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+  }
+
   img {
     width: 100%;
     vertical-align: top;
@@ -47,7 +66,6 @@ const Landscape = styled.div`
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -80,13 +98,22 @@ const About = props => {
   const siteTitle = props.data.site.siteMetadata.title
   const { isDarkMode } = props
 
+  const [loaded, setLoaded] = useState(false)
+
+  function onLoad() {
+    setLoaded(true)
+  }
+
   return (
     <PageWrapper location={props.location} title={siteTitle}>
       <SEO title="About / Thomas Wang" url="https://www.thomaswang.io/about/" />
       <Nav focused="about" />
       <LandscapeContainer href="https://unsplash.com/collections/10605932/landscapes">
         <Landscape>
+          {!loaded && <Skeleton height="100%" width="100%" />}
           <img
+            style={{ display: loaded ? "block" : "none" }}
+            onLoad={onLoad}
             src="https://source.unsplash.com/collection/10605932/1600x900"
             alt=""
           />
