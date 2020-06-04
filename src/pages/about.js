@@ -46,11 +46,12 @@ const About = props => {
         I'm interested in <i>ethics</i>, <i>minimalism</i>, <i>technology</i>,
         and <i>human potential</i>.
       </P>
-      <a href="#stats">
-        <h2 id="stats" style={{ textAlign: "center" }}>
+      <h2 id="stats" style={{ textAlign: "center" }}>
+        <a href="#stats" style={{ boxShadow: "none" }}>
           Personal Stats
-        </h2>
-      </a>
+        </a>
+      </h2>
+
       <Container>
         <BlogViews darkMode={isDarkMode} />
         <Github darkMode={isDarkMode} />
