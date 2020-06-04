@@ -35,9 +35,9 @@ const About = props => {
       <SEO title="About / Thomas Wang" url="https://www.thomaswang.io/about/" />
       <Nav focused="about" />
       <P>
-        You've stumbled onto my about page! Truthfully, I don't have much to say
-        about myself, other than I am figuring out this whole life thing just
-        like everybody else.{" "}
+        Hey, I'm Thomas, and you've stumbled onto my about page! Truthfully, I
+        don't have all that much to say about myself, other than I am trying to
+        figure out this whole life thing just like everybody else.{" "}
         {/* I'm currently pursuing a{" "}
         <a href="https://camd.northeastern.edu/program/computer-science-and-design/">
           BS in Design and Computer Science

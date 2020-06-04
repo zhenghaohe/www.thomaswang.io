@@ -164,7 +164,7 @@ export const BlogViews = props => {
     <>
       <Card href={link} darkMode={props.darkMode} delay="0.2s">
         <Label>
-          <EyeIcon /> Blog Views
+          <EyeIcon /> Blog Posts Views
         </Label>
         <Count darkMode={props.darkMode}>
           {total || <Spinner scale="0.4" />}
