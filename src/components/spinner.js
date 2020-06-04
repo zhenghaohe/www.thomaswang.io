@@ -2,7 +2,7 @@ import React from "react"
 
 const Spinner = props => (
   <div
-    class="lds-spinner"
+    className="lds-spinner"
     style={{ transform: `scale(${props.scale || 0.5})` }}
   >
     <div></div>

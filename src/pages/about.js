@@ -18,11 +18,62 @@ import {
 const P = styled.p`
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
-  margin: 5rem 0 4.5rem;
+  margin: 2rem 0 4rem;
   padding: 0 1rem;
+`
 
-  @media all and (max-width: 650px) {
-    padding: 0 2rem;
+const LandscapeContainer = styled.a`
+  display: block;
+  position: relative;
+  padding: 0 1rem;
+  width: 100%;
+  box-shadow: none;
+`
+
+const Landscape = styled.div`
+  position: relative;
+  margin: 3rem auto 0;
+  width: 100%;
+  min-height: 200px;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+    vertical-align: top;
+    margin: 0;
+    object-fit: cover;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  &::after {
+    content: "source: my landscape collection";
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.875rem;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      opacity: 1;
+    }
   }
 `
 
@@ -34,10 +85,18 @@ const About = props => {
     <PageWrapper location={props.location} title={siteTitle}>
       <SEO title="About / Thomas Wang" url="https://www.thomaswang.io/about/" />
       <Nav focused="about" />
+      <LandscapeContainer href="https://unsplash.com/collections/10605932/landscapes">
+        <Landscape>
+          <img
+            src="https://source.unsplash.com/collection/10605932/1600x900"
+            alt=""
+          />
+        </Landscape>
+      </LandscapeContainer>
       <P>
-        Hey, I'm Thomas, and you've stumbled onto my about page! Truthfully, I
-        don't have all that much to say about myself, other than I am trying to
-        figure out this whole life thing just like everybody else.{" "}
+        Hey, I'm <b>Thomas Wang</b>, and you've stumbled upon my about page!
+        Truthfully, I don't have all that much to say about myself, other than I
+        am trying to figure out this whole life thing just like everybody else.{" "}
         {/* I'm currently pursuing a{" "}
         <a href="https://camd.northeastern.edu/program/computer-science-and-design/">
           BS in Design and Computer Science
@@ -48,7 +107,7 @@ const About = props => {
       </P>
       <h2 id="stats" style={{ textAlign: "center" }}>
         <a href="#stats" style={{ boxShadow: "none" }}>
-          Personal Stats
+          Internet <q>Brag</q> Stats
         </a>
       </h2>
 
