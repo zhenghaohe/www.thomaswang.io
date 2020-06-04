@@ -34,7 +34,6 @@ const Landscape = styled.div`
   position: relative;
   margin: 3rem auto 0;
   width: 100%;
-  min-height: 200px;
   cursor: pointer;
 
   img {
