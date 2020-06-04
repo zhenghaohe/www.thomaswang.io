@@ -1,5 +1,5 @@
 import React from "react"
-import styled from "styled-components"
+import styled, { keyframes } from "styled-components"
 import useSWR from "swr"
 import format from "comma-number"
 import millify from "millify"
@@ -28,28 +28,59 @@ export const Container = styled.div`
   }
 `
 
+const slideRight = keyframes`
+  0% {
+    transform: translateX(-10rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+`
+
+const fadeIn = keyframes`
+  0% {
+  opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`
+
 const Card = styled.a`
   display: block;
   position: relative;
-  background: ${props => props.theme.cardBackground};
+  background: ${props => (props.darkMode ? "#1a1d25" : "#fdfdfd")};
   border-radius: 10px;
-  border: 1px solid ${props => props.theme.cardBorder};
-  box-shadow: ${props => props.theme.cardBoxShadow};
+  border: 1px solid ${props => (props.darkMode ? "#15171d" : "#f6f6f9")};
+  box-shadow: ${props =>
+    props.darkMode
+      ? "0 20px 40px rgba(0,0,0,.25)"
+      : "0 10px 20px rgba(146, 142, 125, 0.2)"};
   will-change: transform;
-  color: ${props => props.theme.cardText};
+  color: ${props => (props.darkMode ? "#B1B1B5" : "#2b2a35")};
   transition: box-shadow 0.2s ease;
   text-align: center;
   cursor: pointer;
   padding: 1rem;
   margin-bottom: 2rem;
   width: 48%;
+  opacity: 0;
+  animation: ${slideRight} 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards,
+    ${fadeIn} 1.5s linear forwards;
+  animation-delay: ${props => props.delay};
 
   &:hover {
-    box-shadow: ${props => props.theme.cardBoxShadowHover};
+    box-shadow: ${props =>
+      props.darkMode
+        ? "0 4px 4px rgba(0,0,0,.25), 0 2px 2px rgba(0,0,0,.25)"
+        : "0 4px 4px rgba(103, 110, 144, 0.05), 0 2px 2px rgba(103, 110, 144, 0.05)"};
   }
 
   &::before {
-    box-shadow: ${props => props.theme.cardBoxBorder};
+    ${props =>
+      props.darkMode
+        ? "0 7px 25px 0 rgba(255, 255, 255, 0.03), 0 4px 12px 0 rgba(255, 255, 255, 0.03)"
+        : "0 7px 25px 0 rgba(0, 0, 0, 0.03), 0 4px 12px 0 rgba(0, 0, 0, 0.03)"};
   }
 
   @media all and (max-width: 650px) {
@@ -76,8 +107,6 @@ const Count = styled.div`
   font-size: 2rem;
   color: ${props => (props.darkMode ? "white" : "black")};
 `
-
-const StatUI = props => <Card href={props.link}>{props.children}</Card>
 
 const YoutubeLogo = () => (
   <svg
@@ -124,22 +153,22 @@ export const Youtube = props => {
 
   return (
     <>
-      <StatUI link={link}>
+      <Card href={link} darkMode={props.darkMode} delay="0.2s">
         <Label>
           <YoutubeLogo /> YouTube Subscribers
         </Label>
         <Count darkMode={props.darkMode}>
           {subscriberCount || <Spinner scale="0.4" />}
         </Count>
-      </StatUI>
-      <StatUI link={link}>
+      </Card>
+      <Card href={link} darkMode={props.darkMode} delay="0.2s">
         <Label>
           <YoutubeLogo /> YouTube Views
         </Label>
         <Count darkMode={props.darkMode}>
           {viewCount || <Spinner scale="0.4" />}
         </Count>
-      </StatUI>
+      </Card>
     </>
   )
 }
@@ -193,22 +222,22 @@ export const Tiktok = props => {
 
   return (
     <>
-      <StatUI link={link}>
+      <Card href={link} darkMode={props.darkMode} delay="0.4s">
         <Label>
           <TiktokLogo /> TikTok Followers
         </Label>
         <Count darkMode={props.darkMode}>
           {followers || <Spinner scale="0.4" />}
         </Count>
-      </StatUI>
-      <StatUI link={link}>
+      </Card>
+      <Card href={link} darkMode={props.darkMode} delay="0.4s">
         <Label>
           <TiktokLogo /> TikTok Likes
         </Label>
         <Count darkMode={props.darkMode}>
           {likes || <Spinner scale="0.4" />}
         </Count>
-      </StatUI>
+      </Card>
     </>
   )
 }
@@ -252,7 +281,7 @@ export const Unsplash = props => {
 
   return (
     <>
-      <StatUI link={link}>
+      <Card href={link} darkMode={props.darkMode} delay="0.6s">
         <Label>
           <UnsplashLogo />
           Unsplash Views
@@ -260,8 +289,8 @@ export const Unsplash = props => {
         <Count darkMode={props.darkMode}>
           {views || <Spinner scale="0.4" />}
         </Count>
-      </StatUI>
-      <StatUI link={link}>
+      </Card>
+      <Card href={link} darkMode={props.darkMode} delay="0.6s">
         <Label>
           <UnsplashLogo />
           Unsplash Downloads
@@ -269,7 +298,7 @@ export const Unsplash = props => {
         <Count darkMode={props.darkMode}>
           {downloads || <Spinner scale="0.4" />}
         </Count>
-      </StatUI>
+      </Card>
     </>
   )
 }
