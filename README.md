@@ -4,7 +4,7 @@
 
 ## Stats
 
-[Firebase Cloud Functions](https://github.com/thomaswang/stats) used to enable [personal stats](https://www.thomaswang.io/about/):
+[Firebase Cloud Functions](https://github.com/thomaswang/stats) used to enable [personal stats](https://www.thomaswang.io/about/).
 
 ## Blog posts
 

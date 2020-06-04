@@ -200,13 +200,17 @@ const IndexPage = props => {
             ...scale(1),
             lineHeight: 1.6,
             textAlign: "center",
+            color: darkMode ? "white" : "black",
           }}
         >
           I’m Thomas Wang and I create digital products and experiences.
         </p>
         <p
           className="systemfont"
-          style={{ maxWidth: "28rem", margin: "0 auto" }}
+          style={{
+            maxWidth: "28rem",
+            margin: "0 auto",
+          }}
         >
           My favorite products are functional with subtle interactions. I am
           constantly inspired by the community of creative people on the web,

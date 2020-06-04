@@ -15,7 +15,16 @@ const Projects = props => {
         url="https://www.thomaswang.io/projects/"
       />
       <Nav focused="projects" />
-      <p style={{ margin: "15rem auto", textAlign: "center" }}>tbd.</p>
+      <p
+        className="systemfont"
+        style={{ margin: "10rem auto", textAlign: "center" }}
+      >
+        <span style={{ fontStyle: "italic" }}>In progress</span>.
+        <br />
+        <br />
+        See my open source projects at{" "}
+        <a href="https://dev.thomaswang.io">dev.thomaswang.io.</a>
+      </p>
     </PageWrapper>
   )
 }

@@ -134,8 +134,10 @@ const Footer = styled.footer`
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 0.9375rem;
+  font-weight: bold;
   text-align: center;
   margin: 16px auto 72px;
+  color: ${props => props.theme.text};
 `
 
 const Sunglasses = styled.svg`
