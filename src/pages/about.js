@@ -6,7 +6,14 @@ import { connect } from "react-redux"
 import PageWrapper from "../components/pageWrapper"
 import SEO from "../components/seo"
 import Nav from "../components/nav"
-import { Container, Youtube, Tiktok, Unsplash } from "../components/stats"
+import {
+  Container,
+  BlogViews,
+  Github,
+  Youtube,
+  Tiktok,
+  Unsplash,
+} from "../components/stats"
 
 const P = styled.p`
   font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -39,10 +46,14 @@ const About = props => {
         I'm interested in <i>ethics</i>, <i>minimalism</i>, <i>technology</i>,
         and <i>human potential</i>.
       </P>
-      <h2 name="stats" style={{ textAlign: "center" }}>
-        Personal Stats
-      </h2>
+      <a href="#stats">
+        <h2 id="stats" style={{ textAlign: "center" }}>
+          Personal Stats
+        </h2>
+      </a>
       <Container>
+        <BlogViews darkMode={isDarkMode} />
+        <Github darkMode={isDarkMode} />
         <Youtube darkMode={isDarkMode} />
         <Tiktok darkMode={isDarkMode} />
         <Unsplash darkMode={isDarkMode} />

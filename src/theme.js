@@ -1,6 +1,8 @@
 export const lightTheme = {
   theme: "light",
   body: "#fffefc",
+  highlight: "black",
+  highlightText: "white",
   headings: "rgb(4, 4, 2)",
   text: "rgb(55, 53, 47)",
   labels: "rgba(55, 53, 47, 0.6)",
@@ -28,6 +30,8 @@ export const lightTheme = {
 export const darkTheme = {
   theme: "dark",
   body: "#16191f",
+  highlight: "white",
+  highlightText: "black",
   headings: "rgb(255, 255, 255)",
   text: "rgba(255, 255, 255, 0.9)",
   labels: "rgba(255, 255, 255, 0.6)",

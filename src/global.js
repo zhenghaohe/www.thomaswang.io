@@ -12,11 +12,12 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   ::-moz-selection {
-    background: #F545B2;
+    background: ${({ theme }) => theme.highlight};
+    color: ${({ theme }) => theme.highlightText};;
   }
   ::selection {
-    background: #F545B2;
-    color: white;
+    background: ${({ theme }) => theme.highlight};
+    color: ${({ theme }) => theme.highlightText};;
   }
 
   html, body {
