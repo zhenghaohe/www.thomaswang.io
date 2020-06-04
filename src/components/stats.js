@@ -103,6 +103,8 @@ const Label = styled.div`
 `
 
 const Count = styled.div`
+  display: grid;
+  place-items: center;
   font-weight: 600;
   font-size: 2rem;
   color: ${props => (props.darkMode ? "white" : "black")};
@@ -167,7 +169,7 @@ export const BlogViews = props => {
           <EyeIcon /> Blog Posts Views
         </Label>
         <Count darkMode={props.darkMode}>
-          {total || <Spinner scale="0.4" />}
+          {total || <Spinner scale="0.3" />}
         </Count>
       </Card>
     </>
@@ -214,7 +216,7 @@ export const Github = props => {
           <StarIcon /> GitHub Stars
         </Label>
         <Count darkMode={props.darkMode}>
-          {stars || <Spinner scale="0.4" />}
+          {stars || <Spinner scale="0.3" />}
         </Count>
       </Card>
     </>
@@ -271,7 +273,7 @@ export const Youtube = props => {
           <YoutubeLogo /> YouTube Subscribers
         </Label>
         <Count darkMode={props.darkMode}>
-          {subscriberCount || <Spinner scale="0.4" />}
+          {subscriberCount || <Spinner scale="0.3" />}
         </Count>
       </Card>
       <Card href={link} darkMode={props.darkMode} delay="0.2s">
@@ -279,7 +281,7 @@ export const Youtube = props => {
           <YoutubeLogo /> YouTube Views
         </Label>
         <Count darkMode={props.darkMode}>
-          {viewCount || <Spinner scale="0.4" />}
+          {viewCount || <Spinner scale="0.3" />}
         </Count>
       </Card>
     </>
@@ -340,7 +342,7 @@ export const Tiktok = props => {
           <TiktokLogo /> TikTok Followers
         </Label>
         <Count darkMode={props.darkMode}>
-          {followers || <Spinner scale="0.4" />}
+          {followers || <Spinner scale="0.3" />}
         </Count>
       </Card>
       <Card href={link} darkMode={props.darkMode} delay="0.4s">
@@ -348,7 +350,7 @@ export const Tiktok = props => {
           <TiktokLogo /> TikTok Likes
         </Label>
         <Count darkMode={props.darkMode}>
-          {likes || <Spinner scale="0.4" />}
+          {likes || <Spinner scale="0.3" />}
         </Count>
       </Card>
     </>
@@ -357,7 +359,7 @@ export const Tiktok = props => {
 
 const UnsplashLogo = () => (
   <svg
-    style={{ marginBottom: "4px", fill: "currentColor" }}
+    style={{ fill: "currentColor" }}
     height="12"
     width="12"
     viewBox="0 0 32 32"
@@ -400,7 +402,7 @@ export const Unsplash = props => {
           Unsplash Views
         </Label>
         <Count darkMode={props.darkMode}>
-          {views || <Spinner scale="0.4" />}
+          {views || <Spinner scale="0.3" />}
         </Count>
       </Card>
       <Card href={link} darkMode={props.darkMode} delay="0.6s">
@@ -409,7 +411,7 @@ export const Unsplash = props => {
           Unsplash Downloads
         </Label>
         <Count darkMode={props.darkMode}>
-          {downloads || <Spinner scale="0.4" />}
+          {downloads || <Spinner scale="0.3" />}
         </Count>
       </Card>
     </>
