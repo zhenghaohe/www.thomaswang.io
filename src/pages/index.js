@@ -173,6 +173,7 @@ const IndexPage = props => {
         style={{ margin: "0 auto", display: "flex", justifyContent: "center" }}
       >
         <svg
+          className="clipYAnimation"
           height="100"
           viewBox="0 0 78 295"
           xmlns="http://www.w3.org/2000/svg"

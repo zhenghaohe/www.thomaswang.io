@@ -137,7 +137,6 @@ const Footer = styled.footer`
   font-weight: bold;
   text-align: center;
   margin: 16px auto 72px;
-  color: ${props => props.theme.text};
 `
 
 const Sunglasses = styled.svg`

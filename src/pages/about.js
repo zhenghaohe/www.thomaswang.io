@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { graphql } from "gatsby"
+import { connect } from "react-redux"
 
 import PageWrapper from "../components/pageWrapper"
 import SEO from "../components/seo"
@@ -20,6 +21,7 @@ const P = styled.p`
 
 const About = props => {
   const siteTitle = props.data.site.siteMetadata.title
+  const { isDarkMode } = props
 
   return (
     <PageWrapper location={props.location} title={siteTitle}>
@@ -28,25 +30,32 @@ const About = props => {
       <P>
         You've stumbled onto my about page! Truthfully, I don't have much to say
         about myself, other than I am figuring out this whole life thing just
-        like everyone else.{" "}
+        like everybody else.{" "}
         {/* I'm currently pursuing a{" "}
         <a href="https://camd.northeastern.edu/program/computer-science-and-design/">
           BS in Design and Computer Science
         </a>
         .  */}
-        I'm interested in ethics, minimalism, technology, and human potential.
+        I'm interested in <i>ethics</i>, <i>minimalism</i>, <i>technology</i>,
+        and <i>human potential</i>.
       </P>
-      <h2 style={{ textAlign: "center" }}>Personal Stats</h2>
+      <h2 name="stats" style={{ textAlign: "center" }}>
+        Personal Stats
+      </h2>
       <Container>
-        <Youtube />
-        <Tiktok />
-        <Unsplash />
+        <Youtube darkMode={isDarkMode} />
+        <Tiktok darkMode={isDarkMode} />
+        <Unsplash darkMode={isDarkMode} />
       </Container>
     </PageWrapper>
   )
 }
 
-export default About
+const mapStateToProps = state => ({
+  isDarkMode: state.theme.isDarkMode,
+})
+
+export default connect(mapStateToProps)(About)
 
 export const pageQuery = graphql`
   query {
