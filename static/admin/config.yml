@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: thomaswang/www.thomaswang.io
+  repo: zhenghaohe/www.thomaswang.io
 
 media_folder: static/assets
 public_folder: assets
